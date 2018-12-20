@@ -38,7 +38,7 @@ module.exports = function(){
 						}))
 						.pipe($.gp.cssunit({
 							type     :    'px-to-rem',
-							rootSize :    16
+							rootSize :    14
 						}))
             .pipe($.gp.csso())
             .pipe($.gp.sourcemaps.write())

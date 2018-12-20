@@ -1,0 +1,105 @@
+.header {
+	&__nav {
+		&.header__nav {
+			&--right {
+				margin-left: auto;
+			}
+		}
+	}
+	&__content {
+		display: flex;
+		align-items: center;
+	}
+	&__top {
+		padding: 10px 0;
+		background-color: $bgTop;
+	}
+	&__main {
+		padding: 25px 0;
+	}
+	&__phones {
+		display: flex;
+		align-items: center;
+		& > * {
+			&:not(:last-child) {
+				margin-right: 30px;
+			}
+		}
+	}
+	&__phone {
+		display: block;
+		font-size: 16px;
+		font-weight: 600;
+		color: $tundora;
+		white-space: nowrap;
+	}
+	&__link {
+		color: $silverChalice;
+		font-size: 12px;
+		line-height: 1.67;
+	}
+	&-address {
+		display: flex;
+		align-items: center;
+		& > * {
+			&:not(:last-child) {
+				margin-right: 15px;
+			}
+		}
+		&__icon {
+			fill: $silverChalice;
+			width: 15px;
+			height: 21px;
+		}
+	}
+	&__shop {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+		& > * {
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		} 
+	}
+	&-goods {
+		&__price {
+			display: block;
+			font-size: 16px;
+			font-weight: 600;
+			color: $tundora;
+		}
+		&__count {
+			display: block; 
+			color: $silverChalice;
+			font-size: 12px;
+			line-height: 1.67;
+		}
+	}
+	&-busket {
+		display: flex;
+		align-items: center;
+		padding: 10px 20px;
+		border-radius: 20px;
+		background-color: $wildSand;
+		cursor: pointer;
+		& > * {
+			&:not(:last-child) {
+				margin-right: 15px;
+			}
+		}
+		&__icon {
+			width: 20px;
+			height: 20px;
+			fill: $blazeOrange;
+		}
+		&__text {
+			font-weight: 600;
+			color: $tundora;
+		}
+	}
+	
+	&__menu {
+
+	}
+}
