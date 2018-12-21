@@ -1,3 +1,22 @@
 .header__menu
 	.container
 		.header__content
+			nav.header__main-nav.main-nav
+				ul.main-nav__list
+					each item in main_nav
+						li.main-nav__item
+							a.main-nav__link(href="#")= item
+							.main-nav-dropdown
+								ul.main-nav-dropdown__list
+									each item in main_nav_dropdown
+										li.main-nav-dropdown__item
+											a.main-nav-dropdown__link(href="#")
+												span.main-nav-dropdown__text= item
+												+icon('right-arrow', 'main-nav-dropdown__icon')
+											.main-subnav
+												ul.main-subnav__list
+													each item in main_subnav 
+														li.main-subnav__item
+															a.main-subnav__link(href="#")= item
+			.header__search.search
+				+icon('search', 'search__icon')

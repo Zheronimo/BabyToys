@@ -50,6 +50,9 @@
     	width: $width;
 	}
 }
+@mixin shift($property: all, $duration: .3s, $ease: linear) {
+	transition: $property $duration $ease;
+}
 @mixin lh($siaze1,$size2){
 	line-height: ($siaze1/$size2)*1em;
 }

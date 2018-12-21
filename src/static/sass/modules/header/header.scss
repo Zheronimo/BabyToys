@@ -1,4 +1,5 @@
 .header {
+	border-bottom: 1px solid $bgTop;
 	&__nav {
 		&.header__nav {
 			&--right {
@@ -17,9 +18,13 @@
 	&__main {
 		padding: 25px 0;
 	}
+	&__logo {
+		margin-right: 40px;
+	}
 	&__phones {
 		display: flex;
 		align-items: center;
+		margin-right: 90px;
 		& > * {
 			&:not(:last-child) {
 				margin-right: 30px;
@@ -35,21 +40,37 @@
 	}
 	&__link {
 		color: $silverChalice;
+		display: block;
+		font-size: 12px;
+		line-height: 1.67;
+		text-decoration: underline;
+	}
+	&__description {
+		color: $silverChalice;
+		display: block;
 		font-size: 12px;
 		line-height: 1.67;
 	}
 	&-address {
 		display: flex;
 		align-items: center;
+		flex: 0 0 190px;
+		width: 190px;
 		& > * {
 			&:not(:last-child) {
 				margin-right: 15px;
 			}
 		}
 		&__icon {
+			flex-shrink: 0;
 			fill: $silverChalice;
 			width: 15px;
 			height: 21px;
+		}
+		&__text {
+			font-size: 12px;
+			line-height: 1.67;
+			color: $tundora;	
 		}
 	}
 	&__shop {
@@ -58,7 +79,7 @@
 		margin-left: auto;
 		& > * {
 			&:not(:last-child) {
-				margin-right: 10px;
+				margin-right: 60px;
 			}
 		} 
 	}
@@ -98,8 +119,7 @@
 			color: $tundora;
 		}
 	}
-	
-	&__menu {
-
+	&__search {
+		margin-left: auto;
 	}
 }
