@@ -10,9 +10,11 @@
 		}
 	}
 	&__item {
+		display: flex;
+		align-items: center;
 		&:hover {
 			.main-nav {
-				&-dropdown {
+				&__dropdown {
 				display: block;
 				}
 				&__link {
@@ -34,41 +36,18 @@
 			border-bottom: 2px solid $blazeOrange;
 		}
 	}
-	&-dropdown {
-			display: none;
-			position: absolute;
-			top: 100%;
-			left: 0;
-			padding-top: 10px;
-			background-color: $white;
-			box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1), 0 2px 5px 0 rgba(0,0,0,0.05);
-		&__list {
-			 
-		}
-		&__item {
-
-		}
-		&__link {
-			display: flex;
-			align-items: center;
-			padding: 10px;
-			width: 360px;
-			font-size: 14px;
-			line-height: 20px;
-			color: $main-shaft;
-			&:hover {
-				background-color:$bgTop;
-				color: $blazeOrange;
-				.main-nav-dropdown__icon {
-					fill: $blazeOrange;
-				}
-			}
-		}
-		&__icon {
-			fill: $silver;
-			margin-left: auto;
-			width: 8px;
-			height: 12px;
-		}
+	&__icon{
+		fill: $tundora;
+		margin-left: 10px;
+		width: 8px;
+		height: 12px;
+	}
+	&__dropdown {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
 	}
 }
+

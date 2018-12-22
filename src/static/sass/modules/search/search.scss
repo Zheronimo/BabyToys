@@ -5,4 +5,40 @@
 		height: 20px;
 		cursor: pointer;
 	}
+	&__body {
+		padding: 20px;
+		background-color: $white;
+		box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.21), 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+	}
+	&__form {
+		display: flex;
+		align-items: center;
+	}
+	&__input {
+		height: 50px;
+		padding: 0 60px 0 30px;
+		line-height: 48px;
+		border: 1px solid $alto;
+		border-radius: 2px 0 0 2px;
+		background-color: transparent;
+		&-wraper {
+			position: relative;
+		}
+	}
+	&__clear {
+		width: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 1;
+	}
+	&__clin {
+		width: 16px;
+		height: 16px;
+
+	}
 }

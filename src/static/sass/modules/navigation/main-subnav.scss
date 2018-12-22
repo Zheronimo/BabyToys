@@ -1,0 +1,44 @@
+.main-subnav {
+	&__list {
+		padding-top: 10px;
+		width: 360px;
+		background-color: $white;
+		box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1), 0 2px 5px 0 rgba(0,0,0,0.05);
+	}
+	&__item {
+		& .main-subnav__list {
+			position: absolute;
+			top: 0;
+			left: 360px;
+			height: 100%;
+			display: none;
+		}
+		&:hover {
+			.main-subnav__list {
+				display: block;
+			}
+		}
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		padding: 10px;
+		width: 360px;
+		font-size: 14px;
+		line-height: 20px;
+		color: $main-shaft;
+		&:hover {
+			background-color:$bgTop;
+			color: $blazeOrange;
+			.main-subnav__icon {
+				fill: $blazeOrange;
+			}
+		}
+	}
+	&__icon {
+		fill: $silver;
+		margin-left: auto;
+		width: 8px;
+		height: 12px;
+	}
+}
