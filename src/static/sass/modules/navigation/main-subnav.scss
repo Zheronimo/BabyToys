@@ -1,18 +1,15 @@
 .main-subnav {
 	&__list {
-		padding-top: 10px;
-		width: 360px;
-		background-color: $white;
-		box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1), 0 2px 5px 0 rgba(0,0,0,0.05);
-	}
-	&__item {
-		& .main-subnav__list {
+		position: relative;
+		.main-subnav__list {
+			display: none;
+			left: 360px;
 			position: absolute;
 			top: 0;
-			left: 360px;
-			height: 100%;
-			display: none;
 		}
+	}
+	&__item {
+		width: 360px;
 		&:hover {
 			.main-subnav__list {
 				display: block;

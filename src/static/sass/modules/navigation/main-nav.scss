@@ -14,7 +14,10 @@
 		align-items: center;
 		&:hover {
 			.main-nav {
-				&__dropdown {
+				&__icon {
+					fill: $blazeOrange;
+				}
+				&__dropdown-wrapper {
 				display: block;
 				}
 				&__link {
@@ -24,7 +27,8 @@
 		}
 	}
 	&__link {
-		display: block;
+		display: flex;
+		align-items: center;
 		padding: 15px 0;
 		font-size: 16px;
 		line-height: 1.88;
@@ -43,11 +47,18 @@
 		height: 12px;
 	}
 	&__dropdown {
-		display: none;
-		position: absolute;
-		top: 100%;
+		display: inline-flex;
 		left: 0;
-		width: 100%;
+		padding-top: 10px;
+		background-color: $white;
+		box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1), 0 2px 5px 0 rgba(0,0,0,0.05);
+		&-wrapper {
+			display: none;
+			left: 0;
+			position: absolute;
+			top: 100%;
+			width: 100%;	
+		}
 	}
 }
 
