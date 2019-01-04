@@ -44,17 +44,18 @@
 		padding: 30px 0;
 	}
 	&__body {
-		display: flex;
-		flex-direction: column;
 		color: $white;
 		flex: 1;
 	}
 	&__title {
+		display: block;
 		font-size: 50px;
 		line-height: 1;
 		margin-bottom: 15px;			
 	}
 	&__descr {
+		display: block;
+		margin-bottom: 40px;
 		font-size: 18px;
 		line-height: 1.67;
 	}
@@ -67,10 +68,32 @@
 			width: 40%;
 		}
 	}
+	&__dots {
+		position: absolute;
+		bottom: 20px;
+		@include vcenter("x");
+		z-index: 2;
+		.slick-dots {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			& > * {
+				&:not(:last-child) {
+					margin-right: 10px;
+				}
+			}
+			li.slick-active {
+				.banner__dot {
+					background-color: $white;
+				}
+			}
+		}
+	}
 	&__dot {
 		width: 8px;
 		height: 8px;
 		display: block;
+		cursor: pointer;
 		background-color: rgba(38, 38, 38, 0.3);
 		border-radius: 50%	;
 		-webkit-border-radius: 50%	;

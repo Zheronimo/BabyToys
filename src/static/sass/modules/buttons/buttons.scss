@@ -1,0 +1,42 @@
+.btn {
+	display: block;
+	text-align: center;
+	height: 40px;
+	padding: 0 10px;
+	font-size: 14px;
+	color: $baseFontSize;
+	font-weight: 600;
+	line-height: 38;
+	background-color: $white;
+	border: 1px solid $blazeOrange;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+	&.btn {
+		&--border {
+			&-white {
+				border-color: $white;
+			}
+		}
+		&--color {
+			&-white {
+				color: $black;
+			}
+		}
+		&--transparent {
+			background-color: transparent;
+		}
+		&--round {
+			border-radius: 20px;
+			-webkit-border-radius: 20px;
+			-moz-border-radius: 20px;
+			-ms-border-radius: 20px;
+			-o-border-radius: 20px;
+		}	
+		&--inline {
+			display: inline-block;
+		}
+	}
+}

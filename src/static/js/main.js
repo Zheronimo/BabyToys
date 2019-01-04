@@ -39,7 +39,8 @@ $(document).ready(function() {
 			dots: true,
 			customPaging: function(slider, i) {
 				return '<a class="banner__dot"></a>'
-			}
+			},
+			appendDots: ".banner__dots"
 		});
 	};
 
