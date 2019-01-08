@@ -2,11 +2,11 @@
 	display: block;
 	text-align: center;
 	height: 40px;
-	padding: 0 10px;
+	padding: 0 20px;
 	font-size: 14px;
-	color: $baseFontSize;
+	color: $blazeOrange;
 	font-weight: 600;
-	line-height: 38;
+	line-height: 38px;
 	background-color: $white;
 	border: 1px solid $blazeOrange;
 	border-radius: 2px;
@@ -14,19 +14,19 @@
 	-moz-border-radius: 2px;
 	-ms-border-radius: 2px;
 	-o-border-radius: 2px;
+	@include shift;
 	&.btn {
-		&--border {
-			&-white {
-				border-color: $white;
-			}
-		}
-		&--color {
-			&-white {
-				color: $black;
-			}
-		}
 		&--transparent {
-			background-color: transparent;
+			&-white {
+				color: $white;
+				background-color: transparent;
+				border-color: $white;
+				@include shift;
+				&:hover {
+					color: $blazeOrange;
+					background-color: $white;
+				}
+			}
 		}
 		&--round {
 			border-radius: 20px;

@@ -22,6 +22,7 @@
 		-ms-border-radius: 50%	;
 		-o-border-radius: 50%	;
 		background-color: rgba($white, .2);
+		@include shift;
 		&.banner__navigation {
 			&--prev {
 				left: 30px;
@@ -38,6 +39,9 @@
 			height: 17px;
 			fill: rgba($black, .5);
 		}
+	}
+	&__item {
+		outline: none;
 	}
 	&__content {
 		display: flex;
@@ -101,4 +105,7 @@
 		-ms-border-radius: 50%	;
 		-o-border-radius: 50%	;
 	}
+}
+.slick-slider img {
+	display: inline;
 }

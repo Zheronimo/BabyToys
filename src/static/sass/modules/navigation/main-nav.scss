@@ -19,6 +19,7 @@
 				}
 				&__dropdown-wrapper {
 				display: block;
+				z-index: 99;
 				}
 				&__link {
 					border-bottom: 2px solid $blazeOrange;

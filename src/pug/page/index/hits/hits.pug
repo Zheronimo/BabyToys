@@ -1,0 +1,18 @@
+section.s-hits
+	.container
+		h2.title-section Хиты продаж
+		.hits.tabs
+			ul.tabs-navigation.hits-navigation
+				li(show-tab="tab1").hits-navigation__item.tabs-navigation__item.tabs-navigation__item--active Хиты продаж
+				li(show-tab="tab2").hits-navigation__item.tabs-navigation__item Выгодно
+				li(show-tab="tab3").hits-navigation__item.tabs-navigation__item Новинки
+			.tabs-body
+				.tab.tab--active.tab1
+					.products-line-slider
+						.js-products-line-slider
+							include ../../../modules/products/prev-1.pug
+							include ../../../modules/products/prev-2.pug
+				.tab.tab2
+					p 2
+				.tab.tab3
+					p 3

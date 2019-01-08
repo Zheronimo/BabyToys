@@ -3,3 +3,37 @@
 		height: 25px;
 	}
 }
+.advantage {
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	& > * {
+		&:not(:last-child) {
+			margin-right: 180px;
+		}
+	}
+	border-radius: 4px;
+	background-color: $parselayn;
+	&__item {
+		display: flex;
+		align-items: center;
+	}
+	&__icon {
+		@include size(50px);
+		fill: $dustyGray;
+		margin-right: 20px;
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+	}
+	&__title {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	&__descr {
+		font-size: 12px;
+		line-height: 24px;
+		color: $midGray;
+	}
+}

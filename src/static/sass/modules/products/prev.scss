@@ -1,0 +1,27 @@
+.product-prev {
+	padding: 20px;
+	padding-top: 190px;
+	position: relative;
+	&__header {
+		position: absolute;
+		height: 160px;
+		top: 20px;
+		bottom: 20px;
+		left: 20px;
+		right: 20px;
+	}
+	&__img {
+		max-width: 100%;
+	}
+	&__body {
+		position: relative;
+	}
+	&__info {
+		display: flex;
+		flex-direction: column;
+	}
+	&__title {
+		font-weight: 600;
+		line-height: 20px;
+	}
+}
