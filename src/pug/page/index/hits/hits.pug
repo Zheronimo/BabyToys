@@ -6,12 +6,9 @@ section.s-hits
 				li(show-tab="tab1").hits-navigation__item.tabs-navigation__item.tabs-navigation__item--active Хиты продаж
 				li(show-tab="tab2").hits-navigation__item.tabs-navigation__item Выгодно
 				li(show-tab="tab3").hits-navigation__item.tabs-navigation__item Новинки
-			.tabs-body
+			.tabs-body.hits__body
 				.tab.tab--active.tab1
-					.products-line-slider
-						.js-products-line-slider
-							include ../../../modules/products/prev-1.pug
-							include ../../../modules/products/prev-2.pug
+					include ./tabs/tab1.pug
 				.tab.tab2
 					p 2
 				.tab.tab3
