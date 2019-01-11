@@ -1,0 +1,44 @@
+section.s-information.s-light-bg
+	.container
+		.information
+			.information-item
+				.information-item__header
+					h2.title-section Новости
+				.information-item__body
+					.news-prev__wrapper
+						a(href="").news-prev
+							.news-prev__img(style="background-image: url('static/img/bayk.png'")
+							.news-prev__body
+								span.news-prev__title Выставка в Германии
+								span.news-prev__date 13 июля 2018
+						a(href="").news-prev
+							.news-prev__img(style="background-image: url('static/img/bayk.png'")
+							.news-prev__body
+								span.news-prev__title Новинки в нашем магазине
+								span.news-prev__date 2 июля 2018
+				.information-item__footer
+					a(href="#").information-item__link Все новости
+			.information-item
+				.information-item__header
+					h2.title-section Отзывы
+				.information-item__body
+					.review-prev
+						p.review-prev__text 
+							|Заказывали на вашем сайте в начали мая двухколесный велосипед Puky для дочки. Очень довольны покупкой! Ребенок катается на нем с большим удовольствием! Сам по себе велосипед замечательный и посадка у него низкая и хот педалей мягкий. Порадовала быстрая доставка, курьер привез велосипед в день заказа.
+						span.review-prev__author Антон
+				.information-item__footer
+					a(href="#").information-item__link Все отзывы
+			.information-item
+				.information-item__header
+					h2.title-section Бренды
+				.information-item__body
+					.brends__wrapper
+						ul.brends__list
+							each brand in ['puky', 'hudora', 'merida', 'micro', 'scool', 'strider']
+								li.brends__item
+									a.brends__link(href="#")
+										img(src=`static/img/brends/${brand}.jpg`, alt="brand logo").brends__img
+										
+				.information-item__footer
+					a(href="#").information-item__link Все бренды
+					span.information-item__count (9)

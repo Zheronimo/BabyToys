@@ -1,0 +1,8 @@
+@import "news";
+.information {
+	display: flex;
+	& > * {
+		flex: 1;
+		padding-right: 40px;
+	}
+}

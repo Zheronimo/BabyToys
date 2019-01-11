@@ -49,6 +49,14 @@ $(document).ready(function() {
 			let tabName = $(this).attr('show-tab');
 			$(this).addClass('tabs-navigation__item--active').siblings().removeClass('tabs-navigation__item--active');
 			$('.tabs-body .' + tabName).addClass('tab--active').siblings().removeClass('tab--active');
+			if ('.tabs-body .' + tabName +'.js-products-line-slider') {
+				$('.js-products-line-slider').each(function () {
+					$(this).slick('refresh');
+				});
+				$('.js-product-prev__slider').each(function () {
+					$(this).slick('refresh');
+				});
+			}
 		});
 	};
 
