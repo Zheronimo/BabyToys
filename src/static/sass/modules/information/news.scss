@@ -1,11 +1,27 @@
 .news-prev {
 	display: flex;
 	align-items: flex-start;
+	color: $main-shaft;
+	line-height: 20px;
+	&__wrapper {
+		& > * {
+			&:not(:last-child) {
+				margin-bottom: 40px;
+			}
+		}
+	}
 	&__img {
 		@include size(80px);
 		background-size: cover;
 		border-radius: 4px;
 		margin-right: 20px;
 		flex-shrink: 0;
+	}
+	&__title {
+		display: block;
+	}
+	&__date {
+		color: $osloGray;
+		font-size: 12px;
 	}
 }

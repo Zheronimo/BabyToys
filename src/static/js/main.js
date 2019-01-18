@@ -46,10 +46,12 @@ $(document).ready(function() {
 
 	let tabs = () => {
 		$('.tabs-navigation__item').click(function () {
-			let tabName = $(this).attr('show-tab');
+			let tabName = $(this).attr('show-tab'),
+				tabsBody = $(this).closest('.tabs').find('.tabs__body')[0],
+				tab = $(tabsBody).find('.' + tabName);
 			$(this).addClass('tabs-navigation__item--active').siblings().removeClass('tabs-navigation__item--active');
-			$('.tabs-body .' + tabName).addClass('tab--active').siblings().removeClass('tab--active');
-			if ('.tabs-body .' + tabName +'.js-products-line-slider') {
+			$(tab).addClass('tab--active').siblings().removeClass('tab--active');
+			if ($(tabsBody).find('.js-products-line-slider').length) {
 				$('.js-products-line-slider').each(function () {
 					$(this).slick('refresh');
 				});

@@ -2,6 +2,7 @@
 	display: block;
 	text-align: center;
 	height: 40px;
+	width: 100%;
 	padding: 0 20px;
 	font-size: 14px;
 	color: $blazeOrange;
@@ -9,11 +10,14 @@
 	line-height: 38px;
 	background-color: $white;
 	border: 1px solid $blazeOrange;
-	border-radius: 2px;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	-ms-border-radius: 2px;
-	-o-border-radius: 2px;
+	cursor: pointer;
+	border-radius: 4px;
+	@include shift;
+	&:hover {
+		background-color: $blazeOrange;
+		color: $white;
+	}
+
 	@include shift;
 	&.btn {
 		&--transparent {
@@ -27,6 +31,15 @@
 					background-color: $white;
 				}
 			}
+			&-grey {
+				color: $osloGray;
+				background-color: transparent;
+				border-color: rgba(38, 38, 38, 0.15);
+				&:hover {
+					background-color: rgba(38, 38, 38, 0.15);
+					color: $white;
+				}
+			}
 		}
 		&--round {
 			border-radius: 20px;
@@ -37,6 +50,12 @@
 		}	
 		&--inline {
 			display: inline-block;
+			width: auto;
+		}
+		&--small {
+			height: 30px;
+			padding: 0 15px;
+			line-height: 28px;
 		}
 	}
 }

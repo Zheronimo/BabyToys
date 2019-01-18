@@ -40,3 +40,47 @@
 .s-light-bg {
 	background-color: $parselayn;
 }
+.about {
+	display: flex;
+	& > * {
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
+	&__body {
+		flex: 1;
+		.tab {
+			& > * {
+				margin: 15px 0;
+				&:first-child {
+					margin-top: 0;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	&-navigation {
+		flex: 0 0 255px;
+		& > * {
+				&:not(:last-child) {
+
+					margin-bottom: 10px;
+				}
+			}
+		&__item {
+			height: 50px;
+			padding-left: 10px;
+			line-height: 48px;
+			border-bottom: 2px solid $alto;
+			text-align: left;
+			&.tabs-navigation__item--active {
+				border-bottom: 2px solid $blazeOrange;
+			}
+		}
+	}
+}
+.text {
+	line-height: 25px;
+}

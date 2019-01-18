@@ -9,7 +9,7 @@ module.exports = function(){
             .pipe ($.gulp.dest('build/static/img/'));
     });
     $.gulp.task('svg:copy', () => {
-        return $.gulp.src('src/static/img/*.svg')
+        return $.gulp.src('src/static/img/**/*.svg')
             .pipe($.gulp.dest('build/static/img/'));
     });
 };
