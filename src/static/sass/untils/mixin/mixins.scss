@@ -64,7 +64,7 @@
 }
 
 @mixin laptops(){
-	@media screen and (max-width: 992px){
+	@media screen and (max-width: 1139px){
 		@content;
 	}
 }

@@ -1,5 +1,10 @@
+@import "mobile.scss";
+
 .header {
 	border-bottom: 1px solid $bgTop;
+	@include laptops {
+		border-bottom: none;
+	}
 	&__nav {
 		&.header__nav {
 			&--right {
@@ -14,9 +19,25 @@
 	&__top {
 		padding: 10px 0;
 		background-color: $bgTop;
+		
 	}
 	&__main {
 		padding: 25px 0;
+	}
+	&__item {
+		@include tablets {
+			display: none;
+		}
+		&--mobile {
+			@include tablets {
+			display: block;
+			}
+		}
+	}
+	&__menu {
+		@include laptops {
+			display: none;
+		}
 	}
 	&__logo {
 		margin-right: 40px;
@@ -60,6 +81,9 @@
 			&:not(:last-child) {
 				margin-right: 15px;
 			}
+		}
+		@include tablets {
+			display: none;
 		}
 		&__icon {
 			flex-shrink: 0;

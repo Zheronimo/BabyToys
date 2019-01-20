@@ -42,8 +42,9 @@ footer.footer
 			ul.socials
 				each social in [{icon:"facebook",name:"Facebook"},{icon:"vk",name:"Вконтакте"},{icon:"instagram",name:"Instagram"},{icon:"ok",name:"Однокласники"}]
 					li.socials__item
-						img.socials__icon(src=`static/img/socials/${social.icon}.svg`, alt=`${social.name}`)
-						span.socials__name=social.name
+						a(href="").socials__link
+							img.socials__icon(src=`static/img/socials/${social.icon}.svg`, alt=`${social.name}`)
+							span.socials__name=social.name
 			.yandex-market
 				img(src="static/img/yandex.svg", alt="Иконка яндекс маркета").yandex-market__img
 				a(href="").btn.btn--small.btn--transparent-grey.btn--inline Оставить отзыв

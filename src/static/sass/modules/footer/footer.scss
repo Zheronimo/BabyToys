@@ -98,16 +98,14 @@ footer {
 			margin-right: 50px;
 		}
 	}
-	&__item {
+	&__link {
+		display: flex;
+		align-items: center;
 		& > * {
 			&:not(:last-child) {
 				margin-right: 20px;
 			}
 		}
-	}
-	&__link {
-		display: flex;
-		align-items: center;
 
 	}
 	&__icon {

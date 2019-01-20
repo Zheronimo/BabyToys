@@ -1,5 +1,8 @@
 .search {
 	position: relative;
+	@include laptops {
+		flex: 1;
+	}
 	&.search--open {
 		.search__body {
 			display: block;

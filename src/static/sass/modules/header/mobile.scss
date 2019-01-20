@@ -1,0 +1,19 @@
+.header {
+	&__mobile {
+		display: none;
+		position: relative;
+		@include laptops {
+			display: block;
+		}
+		.container {
+			display: flex;
+			-webkit-align-items: center;
+			        align-items: center;
+			& > * {
+				&:not(:last-child) {
+				margin-right: 50px;
+				}
+			}
+		}
+	}
+}
