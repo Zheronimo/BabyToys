@@ -7,7 +7,7 @@
 	padding: 20px;
 	border-radius: 4px;
 	background-color: $parselayn;
-	@include tablets {
+	@include desktop {
 		padding: 20px 40px;
 	}
 }
@@ -19,7 +19,7 @@
 			margin-right: 180px;
 		}
 	}
-	@include tablets {
+	@include desktop {
 		& > * {
 		&:not(:last-child) {
 			margin-right: 0;
@@ -32,7 +32,7 @@
 	&__item {
 		display: flex;
 		align-items: center;
-		@include tablets {
+		@include desktop {
 			-webkit-flex-direction: column;
 			    -ms-flex-direction: column;
 			        flex-direction: column;
@@ -45,7 +45,7 @@
 		@include size(50px);
 		fill: $dustyGray;
 		margin-right: 20px;
-		@include tablets {
+		@include desktop {
 			margin-right: 0;
 			margin-bottom: 10px;
 		}
@@ -69,6 +69,9 @@
 }
 .about {
 	display: flex;
+	@include desktop {
+		flex-direction: column;
+	}
 	& > * {
 		&:not(:last-child) {
 			margin-right: 30px;
@@ -76,6 +79,9 @@
 	}
 	&__body {
 		flex: 1;
+		@include desktop {
+			order: 2; 
+		}
 		.tab {
 			& > * {
 				margin: 15px 0;
@@ -90,18 +96,33 @@
 	}
 	&-navigation {
 		flex: 0 0 255px;
+		@include desktop {
+			display: flex;
+			flex: 1;
+			width: 100%;
+			order: 1;
+			margin-bottom: 30px; 
+		}
 		& > * {
-				&:not(:last-child) {
-
-					margin-bottom: 10px;
+			@include desktop {
+				flex: 1;
+			}
+			&:not(:last-child) {
+				margin-bottom: 10px;
+				@include desktop {
+					margin-right: 30px;
 				}
 			}
+		}
 		&__item {
 			height: 50px;
 			padding-left: 10px;
 			line-height: 48px;
 			border-bottom: 2px solid $alto;
 			text-align: left;
+			@include desktop {
+				padding-left: 0;
+			}
 			&.tabs-navigation__item--active {
 				border-bottom: 2px solid $blazeOrange;
 			}

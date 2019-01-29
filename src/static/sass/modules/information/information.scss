@@ -4,9 +4,16 @@
 
 .information {
 	display: flex;
+	@include desktop {
+		flex-wrap: wrap;
+	}
 	& > * {
 		flex: 1;
 		padding-right: 30px;
+		@include desktop {
+			flex: 0 0 50%;
+			width: 50%;
+		}
 		&:last-child {
 			padding-right: 0;
 		}	
@@ -31,6 +38,21 @@
 		}
 		&__count {
 			color: $chelseaCucumber;
+		}
+		&.information-item--wide {
+			@include desktop {
+				flex: 1;
+				width: 100%;
+				margin-top: 40px;
+			}
+			.information-item{
+				&__body {
+					@include desktop {
+						height: auto;
+						margin-bottom: 20px;
+					}
+				}
+			}
 		}
 	}
 }

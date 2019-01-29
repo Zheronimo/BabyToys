@@ -15,6 +15,12 @@
 			margin-bottom: 10px;
 			&:nth-child(3n + 3) {
 				margin-right: 0;
+				@include desktop {
+					margin-right: 10px;
+					&:last-child {
+						margin-right: 0;
+					}
+				}
 			}
 		}
 	}

@@ -17,9 +17,12 @@
 		width: 186px;
 	}
 	&__img {
-		width: auto;
-		height: 160px;
-		outline: none;
+		max-width: 100%;
+		max-height: 160px;
+		margin: 0 auto;
+		&-wrapper {
+			outline: none;
+		}
 	}
 	&__body {
 		position: relative;

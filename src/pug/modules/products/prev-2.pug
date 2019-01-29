@@ -1,8 +1,10 @@
 .product-prev
 	.product-prev__header
 		.js-product-prev__slider
-			img(src="static/img/banner2.png", alt="Велосипед" data-color="#000000").product-prev__img
-			img(src="static/img/puky/hudora-green.png", alt="Велосипед" data-color="#ffffff").product-prev__img
+			.product-prev__img-wrapper(data-color="#000000")
+				img(src="static/img/banner2.png", alt="Велосипед").product-prev__img
+			.product-prev__img-wrapper(data-color="#ffffff")
+				img(src="static/img/puky/hudora-green.png", alt="Велосипед").product-prev__img
 	.product-prev__body
 		.product-prev__info
 			spna.product-prev__title Беговел Puky LR Ride алюминевый

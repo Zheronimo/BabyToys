@@ -1,6 +1,6 @@
 .search {
 	position: relative;
-	@include laptops {
+	@include desktop {
 		flex: 1;
 	}
 	&.search--open {
@@ -60,6 +60,7 @@
 			width: 16px;
 			height: 16px;
 			fill: rgba(75, 75, 75, 0.5);
+			cursor: pointer;
 		}
 	}
 	&__btn {
