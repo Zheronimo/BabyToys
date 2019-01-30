@@ -1,14 +1,31 @@
+mixin mainSubnavLink(link,text)
+	li.catalog-nav__item
+		a(href=link).catalog-nav__link
+			span.catalog-nav__text=text
+			+icon('right-arrow','catalog-nav__icon')
+mixin informNavLink(link,text)
+	li.inform-nav__item
+		a(href=link).inform-nav__link
+
 .header__mobile
 	.container
-		nav.mobile-nav
-			.mobile-nav__header
-				.mobile-nav__sandwich.sandwich
+		.mobile-menu
+			.mobile-menu__toogle
+				.mobile-menu__sandwich.sandwich
 					.sandwich__line.sandwich__line--top
 					.sandwich__line.sandwich__line--middle
 					.sandwich__line.sandwich__line--bottom
 				span.mobile-nav__title Каталог товаров
-			.mobile-nav__body
-				ul.mobile-nav__list
+			.mobile-menu__content
+				.mobile-menu__header
+					span.mobile-menu__title Меню
+					.mobile-menu__close
+						+icon('close','mobile-menu__close-icon')
+				.mobile-menu__body
+					nav.catalog-nav
+						ul.catalog-nav__list
+							each text in main_nav
+								+mainSubnavLink('',text)
 		.search
 			form.search__form(action="")
 				.search__input-wrapper

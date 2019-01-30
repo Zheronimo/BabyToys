@@ -1,4 +1,4 @@
-@import "mobile.scss";
+@import "mobile-menu.scss";
 
 .header {
 	border-bottom: 1px solid $bgTop;
@@ -26,6 +26,23 @@
 	}
 	&__main {
 		padding: 25px 0;
+	}
+	&__mobile {
+		display: none;
+		position: relative;
+		@include desktop {
+			display: block;
+		}
+		.container {
+			display: flex;
+			-webkit-align-items: center;
+			        align-items: center;
+			& > * {
+				&:not(:last-child) {
+				margin-right: 50px;
+				}
+			}
+		}
 	}
 	&__item {
 		@include desktop {
