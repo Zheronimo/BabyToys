@@ -1,5 +1,12 @@
 .mobile-menu {
-	&-toogle {
+	&.mobile-menu--open {
+		.mobile-menu {
+			&__content {
+				display: block;
+			}
+		}
+	}
+	&__toggle {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -18,6 +25,7 @@
 		font-weight: 600;
 	}
 	&__content {
+		display: none;
 		position: absolute;
 		top: 0;
 		right: 15px;
@@ -34,7 +42,7 @@
 		background-color: $blazeOrange;
 	}
 	&__close {
-		@include size(15px);
+		@include size(50px);
 		display: flex;
 		align-items: center;
 		justify-content: center;

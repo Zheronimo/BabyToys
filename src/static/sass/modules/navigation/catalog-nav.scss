@@ -1,7 +1,8 @@
-.main-subnav {
+.catalog-nav {
 	&__list {
+		background-color: $white;
 		position: relative;
-		.main-subnav__list {
+		.catalog-nav__list {
 			display: none;
 			left: 360px;
 			position: absolute;
@@ -11,31 +12,33 @@
 	&__item {
 		width: 360px;
 		&:hover {
-			.main-subnav__list {
+			.catalog-nav__list {
 				display: block;
 			}
+			& > .catalog-nav__link {
+				background-color:$bgTop;
+				color: $blazeOrange;
+			}
+			.catalog-nav__icon {
+				fill: $blazeOrange;
+			}
+		}
+		@include desktop {
+			width: auto;
 		}
 	}
 	&__link {
 		display: flex;
 		align-items: center;
 		padding: 10px;
-		width: 360px;
 		font-size: 14px;
 		line-height: 20px;
 		color: $main-shaft;
-		&:hover {
-			background-color:$bgTop;
-			color: $blazeOrange;
-			.main-subnav__icon {
-				fill: $blazeOrange;
-			}
-		}
 	}
 	&__icon {
 		fill: $silver;
 		margin-left: auto;
-		width: 8px;
+		width: 12px;
 		height: 12px;
 	}
 }

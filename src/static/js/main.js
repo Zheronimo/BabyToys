@@ -2,17 +2,17 @@ $(document).ready(function() {
 	svg4everybody({});
 
 	let mainSubnavHover = () => {
-		$('.main-subnav__item').hover(function() {
-			let parentList = $(this).closest('.main-subnav__list');
-			if ($(this).children('.main-subnav__list').length) {
-				let catNavHeight = $(this).children('.main-subnav__list').outerHeight();
+		$('.catalog-nav__item').hover(function() {
+			let parentList = $(this).closest('.catalog-nav__list');
+			if ($(this).children('.catalog-nav__list').length) {
+				let catNavHeight = $(this).children('.catalog-nav__list').outerHeight();
 				if (parentList.outerHeight() < catNavHeight) {
 					parentList.css('width', '720');
 				}
 				parentList.css('width', '720');
 			}
 		}, function() {
-				let parentList = $(this).closest('.main-subnav__list');
+				let parentList = $(this).closest('.catalog-nav__list');
 				parentList.css('height', 'auto');
 				parentList.css('width', 'auto');
 		})
@@ -110,6 +110,15 @@ $(document).ready(function() {
 		});
 	};
 
+	let mobileMenu = () => {
+		$(document).on('click','.mobile-menu__toggle', function() {
+			$(this).parent().addClass('mobile-menu--open');
+		});
+		$(document).on('click','.mobile-menu__close', function() {
+			$(this).closest('.mobile-menu').removeClass('mobile-menu--open');
+		});
+	};
+
 	mainSubnavHover();
 	openSearchForm();
 	clearSearchForm();
@@ -117,4 +126,5 @@ $(document).ready(function() {
 	tabs();
 	productPrevSlider();
 	productLineSlider();
+	mobileMenu();
 });

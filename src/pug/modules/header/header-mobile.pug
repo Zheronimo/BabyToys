@@ -5,17 +5,17 @@ mixin mainSubnavLink(link,text)
 			+icon('right-arrow','catalog-nav__icon')
 mixin informNavLink(link,text)
 	li.inform-nav__item
-		a(href=link).inform-nav__link
+		a(href=link).inform-nav__link=text
 
 .header__mobile
 	.container
 		.mobile-menu
-			.mobile-menu__toogle
+			.mobile-menu__toggle
 				.mobile-menu__sandwich.sandwich
 					.sandwich__line.sandwich__line--top
 					.sandwich__line.sandwich__line--middle
 					.sandwich__line.sandwich__line--bottom
-				span.mobile-nav__title Каталог товаров
+				span.mobile-menu__title Каталог товаров
 			.mobile-menu__content
 				.mobile-menu__header
 					span.mobile-menu__title Меню
@@ -26,6 +26,18 @@ mixin informNavLink(link,text)
 						ul.catalog-nav__list
 							each text in main_nav
 								+mainSubnavLink('',text)
+					nav.inform-nav.inform-nav--col
+						ul.inform-nav__list
+							each text in header_nav
+								+informNavLink('',text)
+				.mobile-menu__footer
+					.mobile-menu__phone
+						a(href='tel:84951203034').mobile-menu__phone-number 8 (495) 120-30-34
+						a(href='tel:84951203034').mobile-menu__phone-link Заказать звонок
+					.mobile-menu__phone
+						a(href='tel:88007077518').mobile-menu__phone-number 8 (800) 707-75-18
+						span.mobile-menu__phone-text Звонок бесплатный
+
 		.search
 			form.search__form(action="")
 				.search__input-wrapper

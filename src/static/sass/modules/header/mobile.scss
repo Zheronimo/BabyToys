@@ -1,0 +1,17 @@
+.header__mobile {
+	display: none;
+	position: relative;
+	@include desktop {
+		display: block;
+	}
+	.container {
+		display: flex;
+		-webkit-align-items: center;
+						align-items: center;
+		justify-content: space-between;
+		& > * {
+			flex: 0 0 48%;
+			width: 48%;
+		}
+	}
+}
