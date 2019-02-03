@@ -1,3 +1,13 @@
+.s-banner {
+	@include tablets {
+		padding-top: 0;
+	}
+	.container {
+		@include tablets {
+			padding: 0;
+		}
+	}
+}
 .banner {
 	height: 300px;
 	position: relative;
@@ -8,6 +18,9 @@
 	-moz-border-radius: 4px;
 	-ms-border-radius: 4px;
 	-o-border-radius: 4px;
+	@include tablets {
+		padding: 0 15px;
+	}
 	&__navigation {
 		position: absolute;
 		@include vcenter('y');
@@ -24,6 +37,9 @@
 		background-color: rgba($white, .2);
 		cursor: pointer;
 		@include shift;
+		@include tablets {
+			display: none;
+		}
 		&.banner__navigation {
 			&--prev {
 				left: 30px;

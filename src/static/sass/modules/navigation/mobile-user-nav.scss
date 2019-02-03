@@ -1,0 +1,26 @@
+.mobile-user-nav {
+	display: none;
+	margin-left: auto;
+	@include tablets {
+		display: block;
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		& > * {
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+	}
+	&__link {
+		@include size(40px);
+		display: flex;
+		align-items: center;
+		justify-content: center;	
+	}
+	&__icon {
+		@include size(20px);
+		fill: $blazeOrange;
+	}
+}

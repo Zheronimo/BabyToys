@@ -94,15 +94,24 @@ $(document).ready(function() {
 				appendDots: '#' + productsLineSliderID + ' .products-line-slider__dots',
 				prevArrow: '#' + productsLineSliderID + ' .products-line-slider__btn--prev',
 				nextArrow: '#' + productsLineSliderID + ' .products-line-slider__btn--next',
+				customPaging: function(slider, i) {
+					return '<div class="products-line-slider__dot"></div>';
+				},
 				responsive: [
 			    {
 			      breakpoint: 1139,
 			      settings: {
 			        slidesToShow: 3,
-			        arrows: true,
-			        customPaging: function(slider, i) {
-						return '<div class="products-line-slider__dot"></div>';
-					},
+			      }
+			    },{
+			      breakpoint: 767,
+			      settings: {
+			        slidesToShow: 2,
+			      }
+			    },{
+			      breakpoint: 550,
+			      settings: {
+			        slidesToShow: 1,
 			      }
 			    }
 			  ]

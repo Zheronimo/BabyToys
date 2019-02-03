@@ -3,42 +3,55 @@
 		height: 25px;
 	}
 }
+.mobile {
+	&__logo {
+		display: none;
+		@include tablets {
+			display: block;
+		}
+	}
+} 
 .advantages {
+	display: flex;
+	align-items: center;
 	padding: 20px;
 	border-radius: 4px;
 	background-color: $parselayn;
-	@include desktop {
-		padding: 20px 40px;
-	}
-}
-.advantage {
-	display: flex;
-	align-items: center;
 	& > * {
 		&:not(:last-child) {
 			margin-right: 180px;
 		}
 	}
 	@include desktop {
+		padding: 20px 40px;
+		justify-content: space-between;
 		& > * {
-		&:not(:last-child) {
-			margin-right: 0;
+			&:not(:last-child) {
+				margin-right: 0;
+			}
 		}
 	}
-		-webkit-justify-content: space-between;
-		        justify-content: space-between;
+	@include tablets {
+		flex-direction: column;
+		padding: 20px;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+}
+.advantage {
+	display: flex;
+	align-items: center;
+	@include desktop {
+		flex-direction: column;
 		text-align: center;
 	}
-	&__item {
-		display: flex;
-		align-items: center;
-		@include desktop {
-			-webkit-flex-direction: column;
-			    -ms-flex-direction: column;
-			        flex-direction: column;
-		    -webkit-align-items: center;
-		            align-items: center;
-		    margin-right: 0;
+	@include tablets {
+		text-align: left;
+		flex-direction: row;
+		& > * {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
 		}
 	}
 	&__icon {
@@ -49,10 +62,17 @@
 			margin-right: 0;
 			margin-bottom: 10px;
 		}
+		@include tablets {
+			margin-right: 20px;
+			margin-bottom: 0;
+		}
 	}
 	&__body {
 		display: flex;
 		flex-direction: column;
+		@include tablets {
+			align-items: flex-start;
+		}
 	}
 	&__title {
 		font-size: 18px;
@@ -96,12 +116,16 @@
 	}
 	&-navigation {
 		flex: 0 0 255px;
+		width: 255px;
 		@include desktop {
 			display: flex;
 			flex: 1;
 			width: 100%;
 			order: 1;
 			margin-bottom: 30px; 
+		}
+		@include tablets {
+			overflow: auto;
 		}
 		& > * {
 			@include desktop {
@@ -138,19 +162,6 @@
 	width: 20px;
 	position: relative;
 	cursor: pointer;
-	&--active {
-		.sandwich__line {
-			&--top {
-				top: 7px;
-				transform: rotate(45deg);
-			}
-			&--middle {opacity: 0;}
-			&--bottom {
-				top: 7px;
-				transform: rotate(-45deg);
-			}
-		}
-	}
 	&__line {
 		display: block;
 		height: 2px;
@@ -162,6 +173,8 @@
 		&--top {top: 0}
 		&--middle {top: 7px}
 		&--bottom {top: 14px;}
-		
+		@include tablets {
+			background-color: $tundora;
+		}
 	}
 }

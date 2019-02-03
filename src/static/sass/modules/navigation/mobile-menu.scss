@@ -19,6 +19,19 @@
 				margin-right: 20px;
 			}
 		}
+		@include tablets {
+			@include size(50px);
+			margin-right: 15px;
+			background-color: transparent;
+			border-right: 1px solid rgba(75, 75, 75, 0.2);
+		}
+		.mobile-menu {
+			&__title {
+				@include tablets {
+					display: none;
+				}
+			}
+		}
 	}
 	&__title {
 		font-size: 16px;

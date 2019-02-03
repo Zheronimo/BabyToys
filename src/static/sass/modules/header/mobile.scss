@@ -9,9 +9,16 @@
 		-webkit-align-items: center;
 						align-items: center;
 		justify-content: space-between;
+		@include tablets {
+			justify-content: flex-start;
+		}
 		& > * {
 			flex: 0 0 48%;
 			width: 48%;
+			@include tablets {
+				flex: 0 0 auto;
+				width: auto;
+			}
 		}
 	}
 }

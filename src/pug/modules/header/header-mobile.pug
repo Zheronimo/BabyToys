@@ -37,7 +37,8 @@ mixin informNavLink(link,text)
 					.mobile-menu__phone
 						a(href='tel:88007077518').mobile-menu__phone-number 8 (800) 707-75-18
 						span.mobile-menu__phone-text Звонок бесплатный
-
+		.mobile__logo.logo
+			img(src="static/img/logo.svg", alt="logo").logo__img
 		.search
 			form.search__form(action="")
 				.search__input-wrapper
@@ -45,4 +46,15 @@ mixin informNavLink(link,text)
 					.search__clear
 						+icon('close', 'search__clear-icon')
 				input(type="submit" value="Найти").search__btn
+		nav.mobile-user-nav
+			ul.mobile-user-nav__list
+				li.mobile-user-nav__item
+					a.mobile-user-nav__link(href="")
+						+icon('search','mobile-user-nav__icon')
+				li.mobile-user-nav__item
+					a.mobile-user-nav__link(href="")
+						+icon('user','mobile-user-nav__icon')
+				li.mobile-user-nav__item
+					a.mobile-user-nav__link(href="")
+						+icon('busket','mobile-user-nav__icon')
 				

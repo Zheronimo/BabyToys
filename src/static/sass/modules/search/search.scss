@@ -1,5 +1,8 @@
 .search {
 	position: relative;
+	@include tablets {
+		display: none;
+	}
 	&.search--open {
 		.search__body {
 			display: block;

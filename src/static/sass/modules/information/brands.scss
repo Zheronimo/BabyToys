@@ -23,6 +23,11 @@
 				}
 			}
 		}
+		@include tablets {
+			flex-wrap: nowrap;
+			overflow: auto;
+			margin-right: -15px;
+		}
 	}
 }
 .brand {

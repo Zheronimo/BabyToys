@@ -22,10 +22,15 @@
 	&__top {
 		padding: 10px 0;
 		background-color: $bgTop;
-		
+		@include tablets {
+			display: none;
+		}
 	}
 	&__main {
 		padding: 25px 0;
+		@include tablets {
+			display: none;
+		}
 	}
 	&__item {
 		@include desktop {
