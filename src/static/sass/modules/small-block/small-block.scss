@@ -1,6 +1,9 @@
 .logo {
 	&__img {
 		height: 25px;
+		@include tablets {
+			height: 20px;
+		}
 	}
 }
 .mobile {
@@ -136,6 +139,9 @@
 				@include desktop {
 					margin-right: 30px;
 				}
+				@include tablets {
+					margin-bottom: 0;
+				}
 			}
 		}
 		&__item {
@@ -146,6 +152,10 @@
 			text-align: left;
 			@include desktop {
 				padding-left: 0;
+			}
+			@include tablets {
+				height: auto;
+				line-height: 20px;
 			}
 			&.tabs-navigation__item--active {
 				border-bottom: 2px solid $blazeOrange;
@@ -176,5 +186,14 @@
 		@include tablets {
 			background-color: $tundora;
 		}
+	}
+}
+.mobile-scroll {
+	&-wrapper {
+		margin: 0 -15px!important;
+		overflow: auto;
+	}
+	&-inner {
+		padding: 0 15px;
 	}
 }

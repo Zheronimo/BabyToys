@@ -24,7 +24,7 @@ footer.footer
 						+footerNavLink('','Поставщикам')
 						+footerNavLink('','Новости')
 						+footerNavLink('','Отзывы')
-				.footer__item
+				.footer__item.footer__item--wide
 					ul.footer-nav
 						+footerNavLink('','Контакты')
 						+footerNavLink('','Вопросы и ответы')
@@ -43,9 +43,12 @@ footer.footer
 				.footer__item
 					span.footer__text +7 (495) 120-30-34
 					a(href="mailto:sale@baby-toys.ru").footer__mail sale@baby-toys.ru
-				.footer__item
-					img(src="static/img/yandex.svg", alt="Иконка яндекс маркета").yandex-market__img
-					a(href="").btn.btn--inline.btn--small.btn--transparent-grey Оставить отзыв
+				.footer__item.footer__item--full
+					.yandex-market
+						img(src="static/img/yandex.svg", alt="Иконка яндекс маркета").yandex-market__img
+						a(href="").btn.btn--small.btn--transparent-grey.btn--inline Оставить отзыв
+					// img(src="static/img/yandex.svg", alt="Иконка яндекс маркета").yandex-market__img
+					// a(href="").btn.btn--inline.btn--small.btn--transparent-grey Оставить отзыв
 
 	.footer__socials
 		.container
@@ -60,5 +63,5 @@ footer.footer
 				a(href="").btn.btn--small.btn--transparent-grey.btn--inline Оставить отзыв
 	.footer__bottom
 		.container
-			span.copyright © 2010-2018 "Baby-Toys". Все права защищены законом об авторских правах.
+			span.copyright © 2010-2018 "Baby-Toys". Все права защищены. Информация сайта защищена законом об авторских правах.
 			a(href="").footer__personal-data Политика обработки персональных данных

@@ -40,7 +40,15 @@ $(document).ready(function() {
 			customPaging: function(slider, i) {
 				return '<div class="banner__dot"></div>'
 			},
-			appendDots: ".banner__dots"
+			appendDots: ".banner__dots",
+			responsive: [
+			    {
+			      breakpoint: 767,
+			      settings: {
+			        arrows: false
+			      }
+			    }
+			]
 		});
 	};
 
@@ -122,9 +130,17 @@ $(document).ready(function() {
 	let mobileMenu = () => {
 		$(document).on('click','.mobile-menu__toggle', function() {
 			$(this).parent().addClass('mobile-menu--open');
+			if ($(windows).width() < 768) {
+				$('html').addClass('fixed');
+				$('wrapper').addClass('mobile-menu-open')
+			}
 		});
 		$(document).on('click','.mobile-menu__close', function() {
 			$(this).closest('.mobile-menu').removeClass('mobile-menu--open');
+			if ($(windows).width() < 768) {
+				$('html').removeClass('fixed');
+				$('wrapper').removeClasss('mobile-menu-open')
+			}
 		});
 	};
 

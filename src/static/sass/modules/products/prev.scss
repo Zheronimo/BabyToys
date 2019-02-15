@@ -3,6 +3,7 @@
 	margin: 10px 15px 30px;
 	outline: none;
 	@include shift;
+	border: 1px solid $alto;
 	&:hover {
 		box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.05);
 	}

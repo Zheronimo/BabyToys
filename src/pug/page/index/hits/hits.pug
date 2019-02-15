@@ -2,10 +2,12 @@ section.s-hits
 	.container
 		h2.title-section Хиты продаж
 		.hits.tabs
-			ul.tabs-navigation.hits-navigation
-				li(show-tab="tab1").hits-navigation__item.tabs-navigation__item.tabs-navigation__item--active Хиты продаж
-				li(show-tab="tab2").hits-navigation__item.tabs-navigation__item Выгодно
-				li(show-tab="tab3").hits-navigation__item.tabs-navigation__item Новинки
+			.mobile-scroll-wrapper
+				.mobile-scroll-inner
+					ul.tabs-navigation.hits-navigation
+						li(show-tab="tab1").hits-navigation__item.tabs-navigation__item.tabs-navigation__item--active Хиты продаж
+						li(show-tab="tab2").hits-navigation__item.tabs-navigation__item Выгодно
+						li(show-tab="tab3").hits-navigation__item.tabs-navigation__item Новинки
 			.tabs__body.hits__body
 				.tab.tab--active.tab1
 					include ./tabs/tab1.pug

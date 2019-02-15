@@ -3,6 +3,9 @@
 		.mobile-menu {
 			&__content {
 				display: block;
+				@include tablets {
+					left: 0;
+				}
 			}
 		}
 	}
@@ -24,6 +27,11 @@
 			margin-right: 15px;
 			background-color: transparent;
 			border-right: 1px solid rgba(75, 75, 75, 0.2);
+			& > * {
+				&:not(:last-child) {
+					margin-right: 0;
+				}
+			}
 		}
 		.mobile-menu {
 			&__title {
@@ -45,6 +53,18 @@
 		left: 15px;
 		z-index: 5;
 		box-shadow: 0 5px 30px rgba(75, 75, 75, 0.5);
+		transition: all linear .5s;
+		@include tablets {
+			display: block;
+			position: fixed;
+			width: 100%;
+			left: -100%;
+			right: auto;
+			bottom: 0;
+			overflow: auto;
+			box-shadow: none;
+
+		}
 	}
 	&__header {
 		height: 50px;	
