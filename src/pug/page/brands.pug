@@ -1,0 +1,30 @@
+extends ../main-layout
+
+block variables
+	- var title = 'Бренды'
+	- var pageClass = 'brands-page'
+
+block content
+	.breadcrumbs
+		.container
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="index.html") Главная
+				li.breadcrumbs__item
+					span.breadcrumbs__current Бренды
+	section.s-brends
+		.container
+			.brands
+				h1.brands__title.title-page Бренды
+				ul.brands__list
+					each brand in [{img:'puky',name:'PUKY'},{img:'micro',name:'Micro'},{img:'hudora',name:'HUDORA'},{img:'strider',name:'Strider'},{img: 'scool',name:'Scool'},{img:'merida',name:'Merida'},{img:'puky',name:'PUKY'},{img:'micro',name:'Micro'},{img:'hudora',name:'HUDORA'},{img:'strider',name:'Strider'},{img: 'scool',name:'Scool'},{img:'merida',name:'Merida'},{img:'puky',name:'PUKY'},{img:'micro',name:'Micro'},{img:'hudora',name:'HUDORA'},{img:'strider',name:'Strider'},{img: 'scool',name:'Scool'},{img:'merida',name:'Merida'},{img:'puky',name:'PUKY'},{img:'micro',name:'Micro'},{img:'hudora',name:'HUDORA'},{img:'strider',name:'Strider'},{img: 'scool',name:'Scool'},{img:'merida',name:'Merida'}]
+						li.brands__item
+							a.brand(href="#")
+								img(src=`static/img/brands/${brand.img}.jpg`, alt="brand logo").brand__img
+								span.brand__name=brand.name
+			.contant-block
+				h3.title-block Сео текст по брендам 
+				p.text
+					| Купить беговел можно в нашем интернет-магазинеюю Это обойдется не дорого. В ассортименте есть большое количество моделей от известных производителей. Все товары соответствуют европейским нормам безопасности.
+				p.text
+					| Интернет-магазин обслуживает покупателей из всех районов России. Можно покупать товар партиями или поштучно. Доставка осуществляется в кротчайшие срокине зависимо от количества приобретаемого товара. В случае необходимости магазин оказывает бесплатные консультации.  

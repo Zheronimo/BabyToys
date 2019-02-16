@@ -1,12 +1,12 @@
 extends ../main-layout
 
-block title
-	| Baby Toys
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page'
+
 block content
-	include ../modules/header/header.pug
-	include index//banner/banner.pug
+	include index/banner/banner.pug
 	include index/advantages/advantages.pug
 	include index/hits/hits.pug
 	include index/information/information.pug
 	include index/about/about.pug
-	include ../modules/footer/footer.pug
