@@ -157,6 +157,9 @@
 				height: auto;
 				line-height: 20px;
 			}
+			&:hover {
+				border-bottom-color: $blazeOrange;
+			}
 			&.tabs-navigation__item--active {
 				border-bottom: 2px solid $blazeOrange;
 			}
@@ -194,7 +197,9 @@
 		overflow: auto;
 	}
 	&-inner {
+		display: inline-block;
 		padding: 0 15px;
+		width: 100%;
 	}
 }
 .breadcrumbs {
@@ -231,6 +236,7 @@
 	&__current {
 		color: $tundora;
 		font-size: 12px;
+		font-weight: 600;
 	}
 }
 .contant-block {

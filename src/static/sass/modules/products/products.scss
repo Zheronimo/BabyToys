@@ -1,2 +1,34 @@
 @import "prev.scss";
 @import "line-slider.scss";
+
+.products-prev-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	& > * {
+		flex: auto;
+		margin-right: 30px;
+		margin-bottom: 30px;
+		min-width: 20%;
+		max-width: calc(26% - 30px);
+		@include desktop {
+			min-width: 30%;
+			max-width: calc(34% - 30px);
+		}
+		@include tablets {
+			flex: 0 0 100%;
+			min-width: 30%;
+			max-width: 100%;
+		}
+		&:nth-child(4n+4) {
+			margin-right: 0;
+			@include desktop {
+				margin-right: 30px;
+			}
+		}
+		&:nth-child(3n+3) {
+			@include desktop {
+				margin-right: 0;
+			}
+		}
+	}
+}

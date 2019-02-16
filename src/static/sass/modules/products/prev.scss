@@ -1,6 +1,5 @@
 .product-prev {
 	padding: 20px;
-	margin: 10px 15px 30px;
 	outline: none;
 	@include shift;
 	border: 1px solid $alto;
@@ -38,7 +37,7 @@
 		top: 0;
 	}
 	&__title {
-		font-weight: 600;
+		font-weight: 700;
 		line-height: 20px;
 	}
 	&__country {
@@ -54,7 +53,7 @@
 		&-current {
 			font-size: 20px;
 			line-height: 20px;
-			font-weight: 600;
+			font-weight: 700;
 			color: $blazeOrange;
 		}
 		&-old {

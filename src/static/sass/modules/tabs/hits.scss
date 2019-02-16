@@ -8,19 +8,22 @@
 	&-navigation {
 		display: flex;
 		align-items: center;
+		& > * {
+			&:not(:last-child) {
+				margin-right: 30px;
+			}
+		}
 		&__item {
 			height: 50px;
 			flex: 1;
-			& > * {
-				&:not(:last-child) {
-					margin-right: 30px;
-				}
-			}
 			line-height: 48px;
 			border-bottom: 2px solid $alto;
 			text-align: center;
 			&.tabs-navigation__item--active {
 				border-bottom: 2px solid $blazeOrange;
+			}
+			&:hover {
+				border-bottom-color: $blazeOrange;
 			}
 		}
 	}
