@@ -184,6 +184,32 @@ $(document).ready(function() {
 		}
 	};
 
+	let categorySlider = () => {
+		$('.js-category-slider ').slick({
+			slidesToShow: 6,
+			arrows: false,
+			dots: true,
+			customPaging: function(slider, i) {
+				return '<div class="category-slider__dot"></div>'
+			},
+			appendDots: ".category-slider__dots",
+			responsive: [
+				{
+					breakpoint: 1140,
+					settings: {
+						slidesToShow: 4,
+					}
+				},
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 2,
+					}
+				}
+		]
+		});
+	};
+
 	mainSubnavHover();
 	openSearchForm();
 	clearSearchForm();
@@ -194,6 +220,7 @@ $(document).ready(function() {
 	mobileMenu();
 	productBorderLineSlider();
 	brandInfo();
+	categorySlider();
 });
 
 $(window).on('resize',function () {

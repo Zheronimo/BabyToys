@@ -1,0 +1,22 @@
+.select {
+	&__header {
+		padding: 0 15px;
+		display: flex;
+		align-items: center;
+		height: 40px;
+		border-radius: 2px;
+		border: 1px solid $alto;
+		font-size: 12px;
+		line-height: 38px;
+		& > * {
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+	}
+	&__icon {
+		@include size(15px);
+		fill: $blazeOrange;
+		cursor: pointer;
+	}
+}
