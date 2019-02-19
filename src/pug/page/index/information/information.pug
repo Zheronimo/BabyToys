@@ -36,9 +36,9 @@ section.s-information.s-light-bg
 						.mobile-scroll-wrapper
 							.mobile-scroll-inner
 								ul.brands__list-small
-									each brand in [{img:'puky',name:'PUKY'},{img:'micro',name:'Micro'},{img:'hudora',name:'HUDORA'},{img:'strider',name:'Strider'},{img: 'scool',name:'Scool'},{img:'merida',name:'Merida'}]
+									each brand in [{img:'puky',name:'PUKY',link:'brand.html'},{img:'micro',name:'Micro',link:'brand.html'},{img:'hudora',name:'HUDORA',link:'brand.html'},{img:'strider',name:'Strider',link:'brand.html'},{img: 'scool',name:'Scool',link:'brand.html'},{img:'merida',name:'Merida',link:'brand.html'}]
 										li.brands__item
-											a.brand(href="#")
+											a.brand(href=`${brand.link}`)
 												img(src=`static/img/brands/${brand.img}.jpg`, alt="brand logo").brand__img
 												span.brand__name=brand.name	
 				.information-item__footer

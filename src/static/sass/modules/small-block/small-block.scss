@@ -168,6 +168,10 @@
 }
 .text {
 	line-height: 25px;
+	@include tablets {
+		font-size: 12px;
+		line-height: 20px;
+	}
 }
 .sandwich {
 	display: block;

@@ -1,0 +1,24 @@
+extends ../main-layout
+
+block variables
+	- var title = 'Бренд Puky'
+	- var pageClass = 'brand-page'
+
+block content
+	.breadcrumbs
+		.container
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="index.html") Главная
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="brands.html") Бренды
+				li.breadcrumbs__item
+					span.breadcrumbs__current Puky
+	section.s-brand
+		.container
+			h1.title-page Puky
+			include brand/info.pug
+			include brand/slider1.pug
+			include brand/slider2.pug
+			include brand/contant.pug
+			

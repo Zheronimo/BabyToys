@@ -1,0 +1,43 @@
+.products-border-line-slider {
+	&__header {
+		display: flex;
+		align-items: center;
+	}
+	&__body {
+		margin: 0 -15px;
+	}
+	&__navigation {
+		display: flex;
+		margin-left: auto;
+	}
+	.product-prev {
+		margin: 10px 15px 30px;
+		@media screen and (max-width: 549px) {
+			margin: 10px 0 30px;
+		}
+		&:hover {
+			box-shadow: none;
+		}
+	}
+	&__btn {
+		@include size(40px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid $alto;
+		border-radius: 2px;
+		&.products-border-line-slider__btn {
+			&--prev {
+				border-right: 0; 
+				border-radius: 2px 0 0 2px; 
+			}
+			&--next {
+				border-radius: 0 2px 2px 0; 
+			}
+		}
+	}
+	&__icon {
+		@include size(10px);
+		fill: $blazeOrange;
+	}
+}

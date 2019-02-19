@@ -54,4 +54,85 @@
 			box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.05); 
 		}
 	}
+	&-info {
+		display: flex;
+		align-items: flex-start;
+		& > * {
+			&:not(:last-child) {
+				margin-right: 30px;
+				@include tablets {
+					margin-right: 0;
+					margin-bottom: 30px;
+				}
+			}
+		}
+		margin-bottom: 40px;
+		padding-bottom: 40px;
+		border-bottom: 1px solid $alto;
+		&__tablet {
+			flex: 0 0 225px;
+			width: 225px;
+			& > * {
+				&:not(:last-child) {
+					margin-bottom: 20px;
+				}
+			}
+			@include tablets {
+				flex: 1;
+				width: 100%;
+			}
+		}
+		@include tablets {
+			flex-direction: column;
+		}
+	}
+	&__logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 40px;
+		border: 1px solid $alto;
+		border-radius: 2px;
+		.brand__img {
+			height: auto;
+			width: 100%;
+			&:hover {
+				box-shadow: none;
+			}
+		}
+	}
+	&__description {
+		flex: 1;
+		& > * {
+			margin: 20px 0;
+			&:first-child {
+				margin-top: 0;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__certificates {
+		flex: 0 0 255px;
+		width: 225px;
+		&-label {
+			display: block;
+			line-height: 25px;
+			font-weight: 700;
+			margin-bottom: 15px;
+		}
+		@include tablets {
+			flex: 1;
+			width: 100%;
+		}
+	}
+	&__certificate {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 20px;
+		border: 1px solid $alto;
+		border-radius: 2px;
+	}
 }

@@ -144,6 +144,46 @@ $(document).ready(function() {
 		});
 	};
 
+	let productBorderLineSlider = () => {
+		$('.js-products-border-line-slider').each(function (idx) {
+			let productsBorderLineSliderID = "product-line-slider-" + idx;
+			this.closest('.products-border-line-slider').id = productsBorderLineSliderID;
+			$(this).slick({
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				infinite: false,
+				prevArrow: '#' + productsBorderLineSliderID + ' .products-border-line-slider__btn--prev',
+				nextArrow: '#' + productsBorderLineSliderID + ' .products-border-line-slider__btn--next',
+				responsive: [
+			    {
+			      breakpoint: 1139,
+			      settings: {
+			        slidesToShow: 3,
+			      }
+			    },{
+			      breakpoint: 767,
+			      settings: {
+			        slidesToShow: 2,
+			      }
+			    },{
+			      breakpoint: 550,
+			      settings: {
+			        slidesToShow: 1,
+			      }
+			    }
+			  ]
+			});
+		});
+	};
+// Функция для перекдки сертификата на разрешении экрана под планшеты
+	let brandInfo = () => {
+		if ($(window).innerWidth() < 1140 && $(window).innerWidth() > 767) {
+			$('.brand__certificates').appendTo('.brand-info__tablet');
+		} else {
+			$('.brand__certificates').appendTo('.brand-info');
+		}
+	};
+
 	mainSubnavHover();
 	openSearchForm();
 	clearSearchForm();
@@ -152,4 +192,17 @@ $(document).ready(function() {
 	productPrevSlider();
 	productLineSlider();
 	mobileMenu();
+	productBorderLineSlider();
+	brandInfo();
 });
+
+$(window).on('resize',function () {
+	let brandInfo = () => {
+		if ($(window).width() < 1140 && $(window).width() > 767) {
+			$('.brand__certificates').appendTo('.brand-info__tablet');
+		} else {
+			$('.brand__certificates').appendTo('.brand-info');
+		}
+	};
+	brandInfo();
+})
