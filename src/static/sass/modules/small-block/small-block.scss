@@ -1,3 +1,6 @@
+@import "content-block";
+@import "about";
+
 .logo {
 	&__img {
 		height: 25px;
@@ -90,82 +93,6 @@
 .s-light-bg {
 	background-color: $parselayn;
 }
-.about {
-	display: flex;
-	@include desktop {
-		flex-direction: column;
-	}
-	& > * {
-		&:not(:last-child) {
-			margin-right: 30px;
-		}
-	}
-	&__body {
-		flex: 1;
-		@include desktop {
-			order: 2; 
-		}
-		.tab {
-			& > * {
-				margin: 15px 0;
-				&:first-child {
-					margin-top: 0;
-				}
-				&:last-child {
-					margin-bottom: 0;
-				}
-			}
-		}
-	}
-	&-navigation {
-		flex: 0 0 255px;
-		width: 255px;
-		@include desktop {
-			display: flex;
-			flex: 1;
-			width: 100%;
-			order: 1;
-			margin-bottom: 30px; 
-		}
-		@include tablets {
-			overflow: auto;
-		}
-		& > * {
-			@include desktop {
-				flex: 1;
-			}
-			&:not(:last-child) {
-				margin-bottom: 10px;
-				@include desktop {
-					margin-right: 30px;
-				}
-				@include tablets {
-					margin-bottom: 0;
-				}
-			}
-		}
-		&__item {
-			height: 50px;
-			padding-left: 10px;
-			line-height: 48px;
-			border-bottom: 2px solid $alto;
-			text-align: left;
-			@include desktop {
-				padding-left: 0;
-			}
-			@include tablets {
-				height: auto;
-				line-height: 20px;
-			}
-			&:hover {
-				border-bottom-color: $blazeOrange;
-			}
-			&.tabs-navigation__item--active {
-				border-bottom: 2px solid $blazeOrange;
-			}
-		}
-	}
-}
 .text {
 	line-height: 25px;
 	@include tablets {
@@ -241,16 +168,5 @@
 		color: $tundora;
 		font-size: 12px;
 		font-weight: 600;
-	}
-}
-.contant-block {
-	& > * {
-		margin: 20px 0;
-		&:first-child {
-			margin-top: 0;
-		}
-		&:last-child {
-			margin-bottom: 0;
-		}
 	}
 }

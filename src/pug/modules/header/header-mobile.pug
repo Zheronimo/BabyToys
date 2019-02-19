@@ -3,9 +3,6 @@ mixin mainSubnavLink(link,text)
 		a(href=link).catalog-nav__link
 			span.catalog-nav__text=text
 			+icon('right-arrow','catalog-nav__icon')
-mixin informNavLink(link,text)
-	li.inform-nav__item
-		a(href=link).inform-nav__link=text
 
 .header__mobile
 	.container
@@ -28,8 +25,9 @@ mixin informNavLink(link,text)
 								+mainSubnavLink('',text)
 					nav.inform-nav.inform-nav--col
 						ul.inform-nav__list
-							each text in header_nav
-								+informNavLink('',text)
+							each text in header_top
+									li.inform-nav__item
+										a(href=text.link).inform-nav__link=text.name
 				.mobile-menu__footer
 					.mobile-menu__phone
 						a(href='tel:84951203034').mobile-menu__phone-number 8 (495) 120-30-34

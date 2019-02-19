@@ -1,0 +1,63 @@
+.content-block {
+	& > * {
+		margin: 25px 0;
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__row {
+		display: flex;
+		& > * {
+			&:not(:last-child) {
+				margin-right: 30px;
+			}
+		}
+		@include tablets {
+			flex-direction: column;
+		}
+	}
+	&__col {
+		flex: 1;
+	}
+	&__img {
+		display: block;
+	}
+}
+.s-static-page {
+	& + .s-advantages {
+		padding-top: 0;
+	}
+	ul {
+		margin: 30px 0;
+		@include tablets {
+			margin: 10px 0;
+		}
+		&.no-dots {
+			margin: 0;
+			li {
+				padding-left: 0;
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+	li {
+		position: relative;
+		padding-left: 35px;	
+		line-height: 25px;
+		&::before {
+			position: absolute;
+			top: 10px;
+			left: 10px; 
+			content: '';
+			width: 4px;
+			height: 4px;
+			background-color: $tundora;
+			border-radius: 50%;
+		}
+	}
+}

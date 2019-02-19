@@ -3,9 +3,9 @@
 		.header__content
 			nav.header__nav.inform-nav
 				ul.inform-nav__list
-					each item in header_nav
+					each item in header_top
 						li.inform-nav__item
-							a.inform-nav__link(href="#")=item
+							a.inform-nav__link(href=item.link)=item.name
 			nav.header__nav.header__nav--right.inform-nav
 				ul.inform-nav__list
 					each item in ["Регистрация", "Вход"]

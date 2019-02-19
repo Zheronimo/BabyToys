@@ -1,5 +1,13 @@
 {
-	"header_nav":["О компании", "Доставка и оплата", "Акция", "Оптовикам", "Новости", "Гарантия", "Контакты"],
+	"header_top":[
+		{"name":"О компании", "link":"static-page.html"},
+		{"name":"Доставка и оплата", "link":"static-page.html"},
+		{"name":"Акция", "link":"static-page.html"},
+		{"name":"Оптовикам", "link":"static-page.html"},
+		{"name":"Новости", "link":"static-page.html"},
+		{"name":"Гарантия", "link":"static-page.html"}, 
+		{"name":"Контакты", "link":"static-page.html"}
+	],
 	
 	"main_nav": ["Самокаты", "Беговелы", "Велосипеды", "Ролики", "Скейты", "Батуты", "Аксессуары", "Еще"],
 
