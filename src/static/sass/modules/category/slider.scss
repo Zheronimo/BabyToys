@@ -16,6 +16,10 @@
 		text-align: center;
 		background-color: rgba(52, 59,76, .5);
 		border-radius: 0 0 4px 4px;
+		@include tablets {
+			font-size: 14px;
+			line-height: 1.43;
+		}
 	}
 	&__item {
 		text-align: center;

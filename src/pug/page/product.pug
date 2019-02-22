@@ -1,0 +1,52 @@
+extends ../main-layout
+
+block variables
+	- var title = 'Бренд Puky'
+	- var pageClass = 'brand-page'
+
+block content
+	.breadcrumbs
+			.container
+				ul.breadcrumbs__list
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="index.html") Главная
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="index.html") Каталог
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="index.html") Беговелы
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="index.html") Беговелы Puky
+					li.breadcrumbs__item
+						span.breadcrumbs__current Puky
+	section.s-product
+		.container
+			.product
+				.product-slider
+					.product-slider-dots
+						.product-slider-dots__btn.product-slider-dots__btn--prev
+								+icon('up-arrow','product-slider-dots__btn-icon')
+						.js-product-slider-dots
+							.product-slider-dots__item
+								img(src="static/img/puky.jpg").product-slider-dots__img
+							.product-slider-dots__item
+								img(src="static/img/puky.jpg").product-slider-dots__img
+							.product-slider-dots__item
+								img(src="static/img/puky.jpg").product-slider-dots__img
+							.product-slider-dots__item
+								img(src="static/img/puky.jpg").product-slider-dots__img
+						.product-slider-dots__btn.product-slider-dots__btn--next
+							+icon('down-arrow','product-slider-dots__btn-icon')
+
+					.js-product-slider
+						.product-slider__img-wrapper
+							img(src="static/img/puky.jpg" alt="картинка беговела").product-slider__img
+						.product-slider__img-wrapper
+							img(src="static/img/puky.jpg" alt="картинка беговела").product-slider__img
+						.product-slider__img-wrapper
+							img(src="static/img/puky.jpg" alt="картинка беговела").product-slider__img
+						.product-slider__img-wrapper
+							img(src="static/img/puky.jpg" alt="картинка беговела").product-slider__img
+				.product-info
+	include index/advantages/advantages
+	include product/goods
+	include category/content

@@ -53,5 +53,12 @@
 				margin-right: 10px;
 			}
 		}
+		@include tablets {
+			position: static;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 15px;
+		}
 	}
 }

@@ -239,7 +239,23 @@ $(document).ready(function() {
 		$(document).on('click', '.filter-mobile__close', function () {
 			$('.filter').removeClass('filter--open');
 		});
-	}
+	};
+
+	let productSlider = () => {
+		$('.js-product-slider-dots').slick({
+			asNavFor: '.js-product-slider',
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			prevArrow: '.product-slider-dots__btn--prev',
+			nextArrow: '.product-slider-dots__btn--next'
+		});
+		$('.js-product-slider').slick({
+			asNavFor: '.js-product-slider-dots',
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false
+		});
+	};
 
 	mainSubnavHover();
 	openSearchForm();
@@ -255,6 +271,7 @@ $(document).ready(function() {
 	tabletSubnavMenu();
 	select();
 	filterToggle();
+	productSlider();
 });
 
 $(window).on('resize',function () {
