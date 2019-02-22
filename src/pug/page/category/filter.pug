@@ -1,0 +1,98 @@
+.filter__body
+	.filter__block
+		span.filter__title Подкатегории
+		ul.filter-list
+			each link in ['беговелы для детей от 2 лет','беговелы для детей от 3 лет','беговелы Micro','беговелы Puky','беговелы Hudora','беговелы Strider','беговелы Scool']
+				li.filter-list__item
+					a(href="").filter-list__link=link
+	.filter__block
+		span.filter__title Подбор параметров
+		.filter__row
+			.select
+				.select__header
+					span.select__current Пол
+					+icon('arrow-down','select__icon')
+				.select__body
+					ul.select-list
+						li.select-list__item Мужской
+						li.select-list__item Женский
+		.filter__row
+			.select
+				.select__header
+					span.select__current Производитель
+					+icon('arrow-down','select__icon')
+				.select__body
+					ul.select-list
+						li.select-list__item Puky
+						li.select-list__item Micro
+						li.select-list__item Hudora
+						li.select-list__item Strider
+						li.select-list__item Scool
+		.filter__row
+			.select
+				.select__header
+					span.select__current Вес,кг
+					+icon('arrow-down','select__icon')
+				.select__body
+					ul.select-list
+						li.select-list__item 15
+						li.select-list__item 20
+						li.select-list__item 25
+						li.select-list__item 30
+						li.select-list__item 35
+		.filter__row
+			.select
+				.select__header
+					span.select__current Дополнительные свойства
+					+icon('arrow-down','select__icon')
+				.select__body
+					ul.select-list
+						li.select-list__item 15
+						li.select-list__item 20
+						li.select-list__item 25
+						li.select-list__item 30
+						li.select-list__item 35
+		.filter__row
+			.select
+				.select__header
+					span.select__current Возраст
+					+icon('arrow-down','select__icon')
+				.select__body
+					ul.select-list
+						li.select-list__item 1
+						li.select-list__item 5
+						li.select-list__item 8
+						li.select-list__item 10
+						li.select-list__item 12
+		.filter__row
+			.select
+				.select__header
+					span.select__current Особенности
+					+icon('arrow-down','select__icon')
+				.select__body
+					ul.select-list
+						li.select-list__item 15
+						li.select-list__item 20
+		.filter__row
+			.select
+				.select__header
+					span.select__current Количество колес
+					+icon('arrow-down','select__icon')
+				.select__body
+					ul.select-list
+						li.select-list__item 2
+						li.select-list__item 3
+						li.select-list__item 4
+		.filter__row
+			.filter-color
+				span.filter__label Цвет
+				ul.filter-color__list
+					each color in ["000000","666666","ffffff","84d6ff","3333ff","666666","ff0500","ff6500","663300","ffd701","009900","99ff9a","30d5c8","103090"]
+						if (color === "ffffff")
+							li.filter-color__item.filter-color__item--white(style=`background-color:#${color}`)
+						else
+							li.filter-color__item(style=`background-color:#${color}`)
+
+		.filter__buttons
+			button.btn.btn--transparent-grey Сброс
+			button.btn.btn--bg-orange Подбор

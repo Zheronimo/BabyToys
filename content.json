@@ -2,10 +2,10 @@
 	"header_top":[
 		{"name":"О компании", "link":"static-page.html"},
 		{"name":"Доставка и оплата", "link":"static-page.html"},
-		{"name":"Акция", "link":"static-page.html"},
-		{"name":"Оптовикам", "link":"static-page.html"},
-		{"name":"Новости", "link":"static-page.html"},
-		{"name":"Гарантия", "link":"static-page.html"}, 
+		{"name":"Акция", "link":"static-page.html", "mod":"inform-nav__tablet-hide"},
+		{"name":"Оптовикам", "link":"static-page.html", "mod":"inform-nav__tablet-hide"},
+		{"name":"Новости", "link":"static-page.html", "mod":"inform-nav__tablet-hide"},
+		{"name":"Гарантия", "link":"static-page.html", "mod":"inform-nav__tablet-hide"}, 
 		{"name":"Контакты", "link":"static-page.html"}
 	],
 	

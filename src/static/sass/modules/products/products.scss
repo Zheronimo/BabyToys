@@ -36,7 +36,7 @@
 		&--small {
 			& > * {
 				min-width: 30%;
-				max-width: calc(34% - 30px);
+				max-width: calc(35% - 30px);
 				@include tablets {
 					flex: 0 0 100%;
 					margin-right: 0;

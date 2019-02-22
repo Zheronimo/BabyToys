@@ -1,0 +1,139 @@
+.filter {
+	position: relative;
+	background-color: $white;
+	&.filter--open {
+		@include desktop() {
+			display: block;
+		}
+	}
+	@include desktop() {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: -1px;
+		box-shadow: 0 5px 30px 0 rgba(75, 75, 75, .5);
+		z-index: 5;
+	}
+	@include tablets() {
+		top: 55px;
+	}
+	&__body {	
+		& > * {
+			margin: 20px 0;
+			&:first-child {margin-top: 0;}
+			&:last-child {margin-bottom: 0;}
+		}
+	}
+	&__block {	
+		padding: 20px;
+		border-right: 2px;
+		border: 1px solid $alto;
+		& > * {
+			margin: 10px 0;
+			&:first-child {margin-top: 0;}
+			&:last-child {margin-bottom: 0;}
+		}
+	}
+	&__title {
+		display: block;
+		margin-bottom: 10px;
+		line-height: 30px;
+		font-weight: 700;
+		color: $blazeOrange;
+	}
+	&-list {
+		& > * {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+		&__link {
+			color: $tundora;
+			font-weight: 600;
+		}
+	}
+	&__buttons {
+		display: flex;
+		& > * {
+			flex: 1;
+			&:not(:last-child) {
+				margin-right: 15px;
+			}
+		}
+	}
+	&__label {
+		display: block;
+		margin-bottom: 10px;
+		line-height: 30px;
+		color: $tundora;
+		font-weight: 700;
+	}
+	&-color {
+		&__list {
+			display: flex;
+			flex-wrap: wrap;
+			& > * {
+				margin-right: 10px;
+				margin-bottom: 10px;
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+		&__item {
+			@include size(20px);
+			display: block;
+			border-radius: 2px;
+			outline: none;
+			cursor: pointer;
+			&.filter-color__item--white {
+			border: 1px solid $alto;	
+			}
+		}
+	}
+	&-mobile {
+		&__toggle {
+			display: none;
+			height: 40px;
+			padding: 0 15px;
+			line-height: 38px;
+			align-items: center;
+			border: 1px solid $alto;
+			border-radius: 2px;
+			cursor: pointer;
+			& > * {
+				&:not(:last-child) {
+					margin-right: 10px;
+				}
+			}
+			@include desktop() {
+				display: flex;
+				font-size: 12px;
+			}
+
+			&-icon {
+				@include size(12px);
+				fill: $blazeOrange;
+			}
+		}
+		&__close {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 100%;
+			@include size(40px);
+			align-items: center;
+			justify-content: center;
+			background-color: $blazeOrange;
+			cursor: pointer;
+			z-index: 1;
+			@include desktop() {
+				display: flex;
+			}
+			&-icon {
+				@include size(18px);
+				fill: $white;
+			}
+		}
+	}
+}

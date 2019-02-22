@@ -1,4 +1,16 @@
 .select {
+	position: relative;
+	cursor: pointer;
+	&.select--open {
+		.select{
+			&__body {
+				display: block;
+			}
+			&__icon {
+				transform: rotate(180deg);
+			}
+		}
+	}
 	&__header {
 		padding: 0 15px;
 		display: flex;
@@ -7,16 +19,52 @@
 		border-radius: 2px;
 		border: 1px solid $alto;
 		font-size: 12px;
-		line-height: 38px;
 		& > * {
 			&:not(:last-child) {
 				margin-right: 10px;
 			}
 		}
+		&.select__header--multi {
+			.select {
+				&__current {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+	&__body {
+		display: none;
+		position: absolute;
+		border: 1px solid $alto;
+		border-top: 0;
+		border-radius: 0 0 2px;
+		width: auto;
+		min-width: 100%;
+		left: 0;
+		top: 100%;
+		background-color: $white;
+		z-index: 1;
+	}
+	&-list {
+		&__item {
+			height: 40px;
+			padding: 0 10px;
+			line-height: 40px;
+			cursor: pointer;
+			&:hover {
+				background-color: $bgTop;
+			}
+		}
 	}
 	&__icon {
-		@include size(15px);
+		@include size(10px);
+		margin-left: auto;
 		fill: $blazeOrange;
 		cursor: pointer;
+	}
+	&__description {
+		@include tablets {
+			display: none;
+		}
 	}
 }

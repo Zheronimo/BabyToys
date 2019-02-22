@@ -20,8 +20,24 @@ block content
 			.category
 				.category__header
 					h1.category__title Беговелы
+					.filter-mobile__toggle
+						span Фильтры
+						+icon('arrow-right','filter-mobile__toggle-icon')
+					.category__sort
+						.select
+							.select__header.select__header--multi
+								span.select__description Сортировать по:
+								span.select__current популярности
+								+icon('arrow-down','select__icon')
+								.select__body
+									ul.select-list
+										li.select-list__item цене
+										li.select-list__item рейтингу
 				.category__body
-					acide.category-filter
+					acide.filter.category__filter
+						.filter-mobile__close
+							+icon('chevron-left','filter-mobile__close-icon')
+						include category/filter
 					main.category-main
 						.products-prev-wrapper.products-prev-wrapper--small
 							include ../modules/products/prev-1
@@ -52,4 +68,10 @@ block content
 									.select__header
 										span.select__current 12
 										+icon('arrow-down','select__icon')
+									.select__body
+										ul.select-list
+											li.select-list__item 12
+											li.select-list__item 24
+											li.select-list__item 36
+
 						include category/content

@@ -57,5 +57,15 @@
 			padding: 0 15px;
 			line-height: 28px;
 		}
+		&--bg {
+			&-orange {
+				background-color: $blazeOrange;
+				color: $white;
+				&:hover {
+					background-color: $white;
+					color: $blazeOrange;
+				}
+			}
+		}
 	}
 }

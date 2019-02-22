@@ -84,7 +84,11 @@ $(document).ready(function() {
 				infinite: false,
 				customPaging: function(slider, i) {
 					let color = $(slider.$slides[i]).data('color');
-					return '<div class="product-prev__color" style="background-color: '+ color +'"></div>'
+					if (color === "#ffffff") {
+						return '<div class="product-prev__color product-prev__color--white" style="background-color: '+ color +'"></div>'
+					} else {
+						return '<div class="product-prev__color" style="background-color: '+ color +'"></div>'
+					}
 				}
 			});
 		});
@@ -175,7 +179,7 @@ $(document).ready(function() {
 			});
 		});
 	};
-// Функция для перекдки сертификата на разрешении экрана под планшеты
+	// Функция для перекдки сертификата на разрешении экрана под планшеты
 	let brandInfo = () => {
 		if ($(window).innerWidth() < 1140 && $(window).innerWidth() > 767) {
 			$('.brand__certificates').appendTo('.brand-info__tablet');
@@ -187,6 +191,7 @@ $(document).ready(function() {
 	let categorySlider = () => {
 		$('.js-category-slider ').slick({
 			slidesToShow: 6,
+			infinite: false,
 			arrows: false,
 			dots: true,
 			customPaging: function(slider, i) {
@@ -209,6 +214,32 @@ $(document).ready(function() {
 		]
 		});
 	};
+	// функция для скрытия li в меню header__top на планшетном разрешении экрана
+	let tabletSubnavMenu = () => {
+		$(document).on('click', '.inform-nav__tablet-toggle', function () {
+			$(this).toggleClass('inform-subnav--open');
+		});
+	};
+
+	let select = () => {
+		$(document).on('click','.select__header', function () {
+			$(this).parent().toggleClass('select--open');
+		});
+		$(document).on('click','.select-list__item', function () {
+			$(this).closest('.select').removeClass('select--open');
+			let current = $(this).closest('.select').find('.select__current')[0];
+			$(current).text($(this).text());
+		});
+	};
+
+	let filterToggle = () => {
+		$(document).on('click', '.filter-mobile__toggle', function () {
+			$('.filter').addClass('filter--open');
+		});
+		$(document).on('click', '.filter-mobile__close', function () {
+			$('.filter').removeClass('filter--open');
+		});
+	}
 
 	mainSubnavHover();
 	openSearchForm();
@@ -221,6 +252,9 @@ $(document).ready(function() {
 	productBorderLineSlider();
 	brandInfo();
 	categorySlider();
+	tabletSubnavMenu();
+	select();
+	filterToggle();
 });
 
 $(window).on('resize',function () {
