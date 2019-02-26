@@ -57,6 +57,10 @@
 			padding: 0 15px;
 			line-height: 28px;
 		}
+		&--big {
+			height: 50px;
+			line-height: 48px;
+		}
 		&--bg {
 			&-orange {
 				background-color: $blazeOrange;
@@ -66,6 +70,9 @@
 					color: $blazeOrange;
 				}
 			}
+		}
+		&--white-space {
+			white-space: nowrap;
 		}
 	}
 }

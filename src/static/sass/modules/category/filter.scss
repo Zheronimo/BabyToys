@@ -68,29 +68,6 @@
 		color: $tundora;
 		font-weight: 700;
 	}
-	&-color {
-		&__list {
-			display: flex;
-			flex-wrap: wrap;
-			& > * {
-				margin-right: 10px;
-				margin-bottom: 10px;
-				&:last-child {
-					margin-right: 0;
-				}
-			}
-		}
-		&__item {
-			@include size(20px);
-			display: block;
-			border-radius: 2px;
-			outline: none;
-			cursor: pointer;
-			&.filter-color__item--white {
-			border: 1px solid $alto;	
-			}
-		}
-	}
 	&-mobile {
 		&__toggle {
 			display: none;
