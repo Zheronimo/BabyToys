@@ -28,14 +28,15 @@ block content
 					.product-details.tabs
 						.mobile-scroll--wrapper
 							.mobile-scroll-inner
-								ul.tabs-navigation.product-details-navigation
-									li(show-tab="tab-description").product-details-navigation__item.tabs-navigation__item.tabs-navigation__item--active Описание
-									li(show-tab="tab-characteristics").product-details-navigation__item.tabs-navigation__item Характеристики
-									li(show-tab="tab-reviews").product-details-navigation__item.tabs-navigation__item
-										span Отзывы
-										span.product-details-navigation__current 3
-									li.product-details-navigation__item.tabs-navigation__item
-										a(href="") Похожие товары
+								.product-details-navigation__wrapper
+									ul.tabs-navigation.product-details-navigation
+										li(show-tab="tab-description").product-details-navigation__item.tabs-navigation__item.tabs-navigation__item--active Описание
+										li(show-tab="tab-characteristics").product-details-navigation__item.tabs-navigation__item Характеристики
+										li(show-tab="tab-reviews").product-details-navigation__item.tabs-navigation__item
+											span Отзывы
+											span.product-details-navigation__current 3
+										li.product-details-navigation__item.tabs-navigation__item
+											a(href="#l-sam-goods").scroll-link Похожие товары
 						.tabs__body
 							.tab.tab--active.tab-description
 								p.text 1
