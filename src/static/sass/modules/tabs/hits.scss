@@ -17,6 +17,7 @@
 			height: 50px;
 			flex: 1;
 			line-height: 48px;
+			min-width: 150px;
 			border-bottom: 2px solid $alto;
 			text-align: center;
 			&.tabs-navigation__item--active {

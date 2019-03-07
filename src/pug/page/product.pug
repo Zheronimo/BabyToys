@@ -25,28 +25,7 @@ block content
 					include product/slider
 					include product/info
 				.product__body
-					.product-details.tabs
-						.mobile-scroll--wrapper
-							.mobile-scroll-inner
-								.product-details-navigation__wrapper
-									ul.tabs-navigation.product-details-navigation
-										li(show-tab="tab-description").product-details-navigation__item.tabs-navigation__item.tabs-navigation__item--active Описание
-										li(show-tab="tab-characteristics").product-details-navigation__item.tabs-navigation__item Характеристики
-										li(show-tab="tab-reviews").product-details-navigation__item.tabs-navigation__item
-											span Отзывы
-											span.product-details-navigation__current 3
-										li.product-details-navigation__item.tabs-navigation__item
-											a(href="#l-sam-goods").scroll-link Похожие товары
-						.tabs__body
-							.tab.tab--active.tab-description
-								p.text 1
-							.tab.tab-characteristics
-								p.text 2
-							.tab.tab-reviews
-								p.text 3
-							.tab.tab-delivery
-								p.text 4
-
+					include product/details
 	include index/advantages/advantages
 	include product/goods
 	include category/content

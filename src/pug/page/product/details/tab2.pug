@@ -1,0 +1,25 @@
+mixin productTableRow(label,value)
+	tr.product-table__row
+		td.product-table__cell=label
+		td.product-table__cell=value
+
+.content-block
+	h2.title-section Характеристики
+	.product-table__wrapper
+		span.product-table__title Основное
+		table.product-table
+			tbody
+				+productTableRow('Производитель','Puky')
+				+productTableRow('Мкс. выдерживаемый вес, кг','20')
+				+productTableRow('Вес, кг','2,65')
+				+productTableRow('Страна','Германия')
+				+productTableRow('Место сборки','Германия')
+				+productTableRow('Гарантия','2 года')
+				+productTableRow('Габариты (ДхШхВ), см','51х26х22')
+		span.product-table__title Технические данные
+		table.product-table
+			tbody
+				+productTableRow('Материалы рамы','сталь')
+				+productTableRow('Материал колес','EVA (вспененый полиэтилен)')
+				+productTableRow('Регулировка сиденья высоте','нет')
+				+productTableRow('Регулировка руля по высоте','есть')

@@ -58,6 +58,7 @@
 			line-height: 48px;
 			border-bottom: 2px solid $alto;
 			text-align: left;
+			min-width: 150px;
 			@include desktop {
 				padding-left: 0;
 			}
