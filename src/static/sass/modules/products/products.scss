@@ -7,14 +7,46 @@
 
 .product {
 	color: $tundora;
+	&__header {
+		display: flex;
+		margin-bottom: 50px;
+		& > * {
+			flex: 0 0 calc(50% - 15px);
+			width: calc(50% - 15px);
+			&:last-child,
+			&:first-child {
+				@include desktop {
+					flex: 0 0 100%;
+					width: 100%;
+				}
+			}
+			@include tablets {
+				flex: 0 0 100%;
+				width: 100%;
+			}
+		}
+		@include desktop {
+			flex-wrap: wrap;
+		}
+		@include tablets {
+			flex-direction: column;
+			margin-bottom: 20px;
+		}
+	}
 	&-info {
+		margin-left: 15px;
+		@include tablets {
+			margin-left: 0;
+		}
 		&__header {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-
 			.title-page {
 				margin-bottom: 0;
+			}
+			@include desktop {
+				margin-bottom: 20px;
 			}
 		}
 		&__body {
@@ -33,14 +65,24 @@
 			display: flex;
 			align-items: flex-start;
 			justify-content: space-between;
+			margin-top: 50px;
+			@include tablets {
+				display: none;
+			}
 		}
 		&__logo {
 			height: 50px;
+			@include tablets {
+				display: none;
+			}
 		}
 		&__row {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			@include tablets {
+				flex-wrap: wrap;
+			}
 		}
 		&__text {
 			font-size: 13px;
@@ -52,20 +94,23 @@
 			line-height: 20px;
 			border-bottom: 1px dotted $alto;
 		}
-		&-advantage {
+		&-advantages {
+				display: flex;
 			& > * {
 				flex: 1;
 				&:not(:last-child) {
 					margin-right: 15px;
 				}
 			}
+		}
+		&-advantage {
 			&__header {
 				display: flex;
 				align-items: center;
 				margin-bottom: 15px;
 				& > * {
-						&:not(:last-child) {
-					margin-right: 10px;
+					&:not(:last-child) {
+						margin-right: 10px;
 					}
 				}
 			}
@@ -116,6 +161,9 @@
 				border-radius: 2px;
 			}
 		}
+		@include tablets {
+			display: none;
+		}
 	}
 	&-actions {
 		display: flex;
@@ -123,7 +171,24 @@
 		& > * {
 			&:not(:last-child) {
 				margin-right: 20px;
+				@include desktop {
+					margin-right: 0;
+					margin-bottom: 20px;
+				}
+				@include tablets {
+					margin-right: 20px;
+					margin-bottom: 0;
+				}
 			}
+		}
+		@include desktop {
+			flex-direction: column;
+		}
+		@include tablets {
+			flex-direction: row;
+			flex: 0 0 100%;
+			width: 100%;
+			margin-top: 30px;
 		}
 	}
 	&-price {
@@ -168,6 +233,22 @@
 						left: 0;
 					}
 				}
+			}
+		}
+		&__item {
+			font-size: 13px;
+			line-height: 1.54;
+			padding-left: 50px;
+			position: relative;
+			&::beefore {
+				content: '';
+				@include size(4px);
+				border-radius: 50px;
+				background-color: $main-shaft;
+				display: block;
+				position: absolute;
+				left: 10px;
+				top: 8px;
 			}
 		}
 	}

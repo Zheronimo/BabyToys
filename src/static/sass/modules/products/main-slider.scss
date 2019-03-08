@@ -1,15 +1,13 @@
 .product {
-	&__header {
-		display: flex;
-		& > * {
-			flex: 0 0 calc(50% - 15px);
-		}
-	}
 	&-slider {
 		position: relative;
 		padding-left: 100px;
 		margin-right: 15px;
 		overflow: hidden;
+		@include tablets {
+			padding-left: 0;
+			margin-right: 0;
+		}
 		&__img {
 			height: auto;
 			max-height: 100%;
@@ -51,8 +49,8 @@
 			max-height: 100%;
 			height: auto;
 		}
-	}
-	&-info {
-		margin-left: 15px;
+		@include tablets {
+			display: none;
+		}
 	}
 }

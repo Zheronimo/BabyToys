@@ -21,8 +21,8 @@ mixin mainSubnavLink(link,text)
 				.mobile-menu__body
 					nav.catalog-nav
 						ul.catalog-nav__list
-							each text in main_nav
-								+mainSubnavLink('',text)
+							each item in main_nav
+								+mainSubnavLink(item.link,item.text)
 					nav.inform-nav.inform-nav--col
 						ul.inform-nav__list
 							each text in header_top

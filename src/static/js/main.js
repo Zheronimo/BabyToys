@@ -249,7 +249,19 @@ $(document).ready(function() {
 			infinite: false,
 			slidesToScroll: 1,
 			prevArrow: '.product-slider-dots__btn--prev',
-			nextArrow: '.product-slider-dots__btn--next'
+			nextArrow: '.product-slider-dots__btn--next',
+			responsive: [
+				{
+					breakpoint: 1140,
+					settings: {
+						slidesToShow: 2,
+					}
+				},
+				{
+					breakpoint: 767,
+					settings: "unslick"
+				}
+		]
 		});
 		$('.js-product-slider').slick({
 			asNavFor: '.js-product-slider-dots',
@@ -298,6 +310,25 @@ $(document).ready(function() {
 		});
 	};
 
+	let productDetailsWidth = () => {
+		let detailArr = $('.product-details-navigation__item'),
+				detailWidth = 0;
+		for (let i =  0; i < detailArr.length; i++) {
+			detailWidth = detailWidth + detailArr[i].offsetWidth;
+		}
+		$('.product-details-navigation').css('min-width', detailWidth);
+	};
+
+	let productDetailsTablet = () => {
+		if ($(window).innerWidth() < 1140) {
+			$('.product-info__footer').appendTo('.product__header');
+			$('.product-info__header').prependTo('.product__header');
+		} else {
+			$('.product-info__footer').appendTo('.product-info');
+			$('.product-info__header').prependTo('.product-info');
+		}
+	};
+
 	mainSubnavHover();
 	openSearchForm();
 	clearSearchForm();
@@ -315,6 +346,8 @@ $(document).ready(function() {
 	productSlider();
 	colorClicked();
 	scrollToElement();
+	productDetailsWidth();
+	productDetailsTablet();
 });
 
 $(window).on('resize',function () {
@@ -326,4 +359,34 @@ $(window).on('resize',function () {
 		}
 	};
 	brandInfo();
-})
+
+	let productDetailsTablet = () => {
+		if ($(window).innerWidth() < 1140) {
+			$('.product-info__footer').appendTo('.product__header');
+			$('.product-info__header').prependTo('.product__header');
+		} else {
+			$('.product-info__footer').appendTo('.product-info');
+			$('.product-info__header').prependTo('.product-info');
+		}
+	};
+	productDetailsTablet();
+});
+
+//Полифил для IE11
+(function () {
+	if (!Element.prototype.closest) {
+		Element.prototype.closest = function (css) {
+			var node = this;
+			while (node) {
+				if (node.matches(css)) return node;
+				else node = node.parentElement;
+			}
+			return null;
+		};
+	}
+})();
+(function () {
+	if (!Element.prototype.matches) {
+		Element.prototype.matches = Element.prototype.matchesSelector || Element.prototype.webkitMatchesSelector || Element.prototype.mozMatchesSelector || Element.prototype.msMatchesSelector; 
+	}
+})();

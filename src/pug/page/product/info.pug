@@ -37,26 +37,27 @@
 				button.btn.btn--bg-orange.btn--big Купить
 				button.btn.btn--transparent-grey.btn--big.btn--white-space Купить в 1 клик
 	.product-info__footer
-		.product-info-advantage
-			.product-info-advantage__header
-				+icon('wallet','product-info-advantage__icon')
-				span.product-info-advantage__title Оплата
-			.product-info-advantage__body
-				ul.product-list.product-list--advantage
-					each item in ['Наличные','Электронные деньги','Сбербанк','Безналичная оплата']
-						li.product-list__item=item
-		.product-info-advantage
-			.product-info-advantage__header
-				+icon('fast-delivery','product-info-advantage__icon')
-				span.product-info-advantage__title Доставка
-			.product-info-advantage__body
-				p.product__text По Москве сегодня курьером - <b>бесплатно</b>  
-				p.product__text Самовывоз с нашего магазина - <b>бесплатно</b>  
-		.product-info-advantage
-			.product-info-advantage__header
-				+icon('map','product-info-advantage__icon')
-				span.product-info-advantage__title Самовывоз
-			.product-info-advantage__body
-				p.product__text г. Москва, проспект Андропова, д. 11, к. 2, павильен № 1/2
-				a(href="").product-info__link Яндекс карты
+		.product-info-advantages
+			.product-info-advantage
+				.product-info-advantage__header
+					+icon('wallet','product-info-advantage__icon')
+					span.product-info-advantage__title Оплата
+				.product-info-advantage__body
+					ul.product-list.product-list--advantage
+						each item in ['Наличные','Электронные деньги','Сбербанк','Безналичная оплата']
+							li.product-list__item=item
+			.product-info-advantage
+				.product-info-advantage__header
+					+icon('fast-delivery','product-info-advantage__icon')
+					span.product-info-advantage__title Доставка
+				.product-info-advantage__body
+					p.product__text По Москве сегодня курьером - <b>бесплатно</b>  
+					p.product__text Самовывоз с нашего магазина - <b>бесплатно</b>  
+			.product-info-advantage
+				.product-info-advantage__header
+					+icon('map','product-info-advantage__icon')
+					span.product-info-advantage__title Самовывоз
+				.product-info-advantage__body
+					p.product__text г. Москва, проспект Андропова, д. 11, к. 2, павильен № 1/2
+					a(href="").product-info__link Яндекс карты
 		

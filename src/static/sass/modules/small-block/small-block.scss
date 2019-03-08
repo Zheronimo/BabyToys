@@ -107,6 +107,9 @@
 		font-style: italic;
 		border-left: 3px solid $blazeOrange;
 		margin: 50px 0 45px;
+		@include tablets {
+			margin-top: 0;
+		}
 	}
 }
 .sandwich {
@@ -146,10 +149,16 @@
 	&__list {
 		display: flex;
 		align-items: center;
+		@include tablets {
+			flex-wrap: wrap;
+		}
 	}
 	&__item {
 		display: flex;
 		align-items: center;
+		@include tablets {
+			margin-bottom: 5px;
+		}
 		&::after {
 			width: 16px;
 			height: 11px;
